@@ -1,0 +1,452 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap');
+@import 'variables';
+@import 'mixins';
+@import 'base-styles';
+@import 'media-query';
+@import 'extends';
+
+
+
+
+//bg image 
+
+.landing-page {
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../images/bg-image.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:  center;
+    position: relative;
+    right: 0;
+    transition: 0.5s;
+    z-index: 1000;
+   
+} 
+
+.landing-page-active {
+    right: 70%;
+    @include md {
+        right: 0;
+    }
+    
+}
+
+.body-scroll {
+    overflow-y: hidden;
+}
+
+//navigation
+
+.navigation {
+    &__container {
+        @include container(1rem, 1200px);
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__navlinks {
+
+        display: none;
+        @include md {
+            display: flex;
+        }
+
+       
+
+        li {
+            margin-left: 2rem;
+        }
+
+        
+    }
+    &__navlink {
+        color: $light;
+    }
+
+    &__toggle {
+        z-index: 50;
+        cursor: pointer;
+        transition: 0.5s;
+       @include md {
+           display: none;
+       }
+    
+    }
+
+    .hamburger {
+        position: fixed;
+        top: 0;
+        right: -70%;
+        width: 70%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $dark;
+        transition: 0.5s;
+       
+      li {
+          margin: 5rem 0;
+      }
+    
+      &__navlink {
+          color: $light;
+      }
+      
+    }
+    
+    .hamburger-active {
+        right: 0;
+       
+    }
+}
+
+// toggle animations
+
+
+.toggle-rotate {
+    transform: rotate(360deg);
+  }
+
+  .change .bar1 {
+    transform: rotate(-45deg) translate(-8px, 6px);
+  }
+  
+  .change .bar2 {
+    opacity: 0;
+  }
+  
+  .change .bar3 {
+    width: 30px;
+    transform: rotate(45deg) translate(-6px, -5px);
+  }
+
+//showcase 
+
+.showcase {
+    &__container {
+        @include container(0rem 1rem, 1200px);
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: $light;
+        text-align: center;
+        @include md {
+            align-items: flex-start;
+            text-align: left;
+        }
+    }
+    &__text {
+        max-width: 800px;
+    }
+   
+    h1 {
+        
+        @include lg {
+            font-size: 4rem;
+        }
+    }
+    p {
+       
+        
+        @include lg {
+            font-size: 2rem;
+        }
+    }
+
+}
+
+//hamburger menu
+
+
+
+
+
+//services 
+
+.services {
+   
+    &__container {
+        text-align: center;
+        @include container(5rem 1rem, 1200px);
+        @include md {
+            @include container(10rem 1rem, 1200px);
+        }
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        @include md {
+            grid-template-columns: 1fr 1fr;
+
+        }
+        @include lg {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+    i {
+        padding-bottom: 1rem;
+        font-size: 3rem;
+    }
+    h2 {
+        text-transform: capitalize;
+    }
+}
+
+
+// call now
+
+.call-now {
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../images/cannon.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:  center;
+    background-attachment: fixed;
+    &__container {
+        @include container(5rem 1rem, 1200px);
+        @include md {
+            @include container(10rem 1rem, 1200px);
+        }
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        @include md {
+            grid-template-columns: 1.5fr 0.5fr;
+        }
+    }
+
+    &__text {
+        color: $light;
+        text-align: center;
+        @include md {
+            text-align: left;
+        }
+    }
+
+    &__btn {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+}
+
+//gallery
+
+.gallery {
+    &__container {
+        @include container(5rem 1rem, 1200px);
+        @include md {
+            @include container(10rem 1rem, 1200px);
+        }
+    }
+    &__grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: repeat(6, 5rem);
+        gap: 0.5rem;
+        @include md {
+            grid-template-rows: repeat(6, 10rem);
+        }
+        @include lg {
+            grid-template-rows: repeat(6, 15rem);
+        }
+    }
+
+    img {
+        width: 100%;
+        object-fit: cover;
+        height: 100%;
+        cursor: pointer;
+      }
+
+      &__item1 {
+          grid-column: 1/3;
+        grid-row: 1/3;
+      }
+      &__item2 {
+          grid-column: 3/5;
+          grid-row: 1/4;
+      }
+      &__item3 {
+          grid-column: 1/3;
+          grid-row: 3/5;
+      }
+      &__item4 {
+          grid-column: 3/5;
+          grid-row: 4/7;
+      }
+      &__item5 {
+          grid-column: 1/3;
+          grid-row: 5/7;
+      }
+
+}
+
+.contact {
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../images/cannon.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:  center;
+    
+    &__container {
+        @include container(5rem 1rem, 1200px);
+        @include md {
+            @include container(10rem 1rem, 1200px);
+        }
+        text-align: center;
+        color: $light;
+    }
+    form {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        @include md {
+            grid-template-columns: 1fr 1fr 1fr;
+            
+        }
+    }
+
+    .input-field {
+        position: relative;
+        width: 100%;
+        margin-bottom: 40px;
+        text-align: left;
+        
+        label {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          color: $light;
+          transition: 0.2s;
+          cursor: text;
+        }
+        input,
+        textarea {
+          width: 100%;
+          border: 0;
+          outline: 0;
+          padding: 0.5rem 0;
+          border-bottom: 1px solid $light;
+          background-color: transparent;
+          box-shadow: none;
+          color:$light;
+          
+          &:invalid {
+            outline: 0;
+          }
+          &:focus,
+          &:valid {
+            border-bottom: 2px solid $light;
+            margin-bottom: -1px;
+            
+          }
+          &:focus ~ label,
+          &:valid ~ label {
+            font-size: 14px;
+            top: -24px;
+            color: $light;
+          }
+        }
+      }
+      .name {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+        @include md {
+            grid-column: 1 / 2;
+            grid-row: 1 / 2;
+        }
+    }
+    .email {
+        grid-column: 1 / 2; 
+        grid-row: 2 / 3;
+        @include md {
+            grid-column: 2 / 3;
+            grid-row: 1 / 2;
+        }
+    }
+
+    .phone {
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+        @include md {
+            grid-column: 3 / 4;
+            grid-row: 1 / 2;
+        }
+    }
+    .textarea {
+        grid-column: 1/ 2;
+        grid-row:  4/ 5;
+        @include md {
+            grid-column: 1 / 4;
+            grid-row: 2/ 3;
+        }
+    }
+    button {
+        grid-column: 1 / 2;
+        grid-row: 5 / 6;
+        @include md {
+            grid-column: 3 / 4;
+            grid-row: 3 / 4;
+        }
+        
+    }
+
+   
+}
+
+
+.footer-top {
+    background-color: $dark;
+
+    &__container {
+        @include container(2rem 1rem, 1200px);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 30rem;
+        @include sm {
+            flex-direction: row;
+            height: unset;
+        }
+    }
+
+    
+
+    li {
+        margin-bottom: 1rem;
+    }
+    a {
+        color: set-text-color($dark);
+        
+    }
+
+    &__social {
+        a { 
+            margin-right: 2rem;
+        }
+    }
+    
+}
+
+.footer-bottom {
+   
+    color: $light;
+    background-color: $dark;
+    text-align: center;
+    &__container {
+        @include container(2rem 1rem, 1200px);
+        border-top: 1px solid $light;
+    }
+}

@@ -1,0 +1,64 @@
+@import 'media-query';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    letter-spacing: 1px;
+   
+}
+
+body {
+    background-color: $light;
+    color: $dark;
+    overflow-x: hidden;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    
+}
+
+h1,h2,h3, p {
+    padding-bottom: 2rem;
+}
+
+.btn {
+    padding: 1rem 2.5rem;
+    background-color: transparent;
+    color: $light;
+    border: 2px solid $light;
+    transition: 0.3s;
+    border-radius: 30px;
+    cursor: pointer;
+    &:hover {
+        background-color: $light;
+        color: $dark;
+    }
+
+}
+
+
+
+.heading {
+    @include lg {
+        font-size: 2rem;
+    }
+    text-transform: uppercase;
+    padding-bottom: 5rem;
+    text-align: center;
+ 
+   
+}
+
+.logo {
+    img {
+        width: 7rem;
+    }
+}

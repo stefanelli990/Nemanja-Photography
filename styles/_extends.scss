@@ -1,0 +1,15 @@
+%hamburger-bars {
+    width: 30px;
+    height: 2px;
+    background-color: $light;
+    margin: 7px 0;
+    transition: 0.5s;
+  }
+  
+  .bar1,
+  .bar2,
+  .bar3 {
+    @extend %hamburger-bars;
+  }
+  
+  
