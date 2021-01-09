@@ -54,14 +54,9 @@
         @include md {
             display: flex;
         }
-
-       
-
         li {
             margin-left: 2rem;
         }
-
-        
     }
     &__navlink {
         color: $light;
@@ -78,30 +73,30 @@
     }
 
     .hamburger {
+        padding: 2rem;
         position: fixed;
         top: 0;
         right: -70%;
         width: 70%;
         height: 100vh;
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
+        flex-direction: column;
         background-color: $dark;
         transition: 0.5s;
-       
+        @include md {
+            display: none;
+        }
       li {
           margin: 5rem 0;
       }
-    
-      &__navlink {
-          color: $light;
-      }
-      
     }
+
+    
     
     .hamburger-active {
-        right: 0;
-       
+        right: 0; 
     }
 }
 
@@ -162,7 +157,7 @@
 
 }
 
-//hamburger menu
+
 
 
 
@@ -171,6 +166,7 @@
 //services 
 
 .services {
+   background-color: $dark;
    
     &__container {
         text-align: center;
@@ -192,58 +188,25 @@
             grid-template-columns: 1fr 1fr 1fr;
         }
     }
+    &__item {
+        padding: 2rem;
+        background-color: lighten($dark, 2);
+        
+    }
     i {
+        color: $accent;
         padding-bottom: 1rem;
         font-size: 3rem;
     }
-    h2 {
-        text-transform: capitalize;
-    }
+   
 }
 
 
-// call now
-
-.call-now {
-    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../images/cannon.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position:  center;
-    background-attachment: fixed;
-    &__container {
-        @include container(5rem 1rem, 1200px);
-        @include md {
-            @include container(10rem 1rem, 1200px);
-        }
-    }
-
-    &__grid {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 1rem;
-        @include md {
-            grid-template-columns: 1.5fr 0.5fr;
-        }
-    }
-
-    &__text {
-        color: $light;
-        text-align: center;
-        @include md {
-            text-align: left;
-        }
-    }
-
-    &__btn {
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-    }
-}
 
 //gallery
 
 .gallery {
+    background-color: lighten($dark, 2);
     &__container {
         @include container(5rem 1rem, 1200px);
         @include md {
@@ -304,18 +267,46 @@
         @include md {
             @include container(10rem 1rem, 1200px);
         }
-        text-align: center;
+        
         color: $light;
     }
-    form {
+
+    &__grid {
         display: grid;
         grid-template-columns: 1fr;
         gap: 2rem;
+        background-color: #ffffff26;
+    padding: 3rem;
+    backdrop-filter: blur(10px);
         @include md {
-            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-columns: 1fr 1fr;
             
         }
     }
+
+    &__info {
+        div {
+            margin: 4rem 0;
+            @include md {
+                margin: unset;
+            }
+        }
+        display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+           text-align: center;
+        i {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            color: $accent;
+        }
+        a {
+            color: $light;
+            
+        }
+    }
+
+    
 
     .input-field {
         position: relative;
@@ -348,7 +339,7 @@
           }
           &:focus,
           &:valid {
-            border-bottom: 2px solid $light;
+            border-bottom: 2px solid $accent;
             margin-bottom: -1px;
             
           }
@@ -356,7 +347,7 @@
           &:valid ~ label {
             font-size: 14px;
             top: -24px;
-            color: $light;
+            color: $accent;
           }
         }
       }
@@ -407,46 +398,13 @@
 }
 
 
-.footer-top {
+
+.footer {
     background-color: $dark;
-
-    &__container {
-        @include container(2rem 1rem, 1200px);
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        height: 30rem;
-        @include sm {
-            flex-direction: row;
-            height: unset;
-        }
-    }
-
-    
-
-    li {
-        margin-bottom: 1rem;
-    }
-    a {
-        color: set-text-color($dark);
+    color: set-text-color($dark);
+    .footer-container {
+        @include container(2rem, 1200px);
+        text-align: center;
         
-    }
-
-    &__social {
-        a { 
-            margin-right: 2rem;
-        }
-    }
-    
-}
-
-.footer-bottom {
-   
-    color: $light;
-    background-color: $dark;
-    text-align: center;
-    &__container {
-        @include container(2rem 1rem, 1200px);
-        border-top: 1px solid $light;
     }
 }

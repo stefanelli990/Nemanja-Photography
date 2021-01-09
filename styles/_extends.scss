@@ -12,4 +12,14 @@
     @extend %hamburger-bars;
   }
   
-  
+  %navlink {
+      color: $light;
+      transition: 0.3s;
+      &:hover {
+          color: $accent;
+      }
+  }
+
+  .navlink {
+      @extend %navlink;
+  }
