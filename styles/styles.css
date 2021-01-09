@@ -9,6 +9,10 @@
   letter-spacing: 1px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   color: #fff;
   overflow-x: hidden;
@@ -61,9 +65,14 @@ h1, h2, h3, p {
   }
 }
 
+.social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .social a {
   color: #fff;
-  margin: 0 1rem;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
@@ -87,19 +96,19 @@ h1, h2, h3, p {
   transition: 0.5s;
 }
 
-.navlink {
+.nav-link {
   color: #fff;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
-.navlink:hover {
+.nav-link:hover {
   color: #FF7A00;
 }
 
 .landing-page {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../images/bg-image.jpeg");
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/bg-image.jpeg");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../images/bg-image.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/bg-image.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -122,6 +131,12 @@ h1, h2, h3, p {
 
 .body-scroll {
   overflow-y: hidden;
+}
+
+@media (min-width: 768px) {
+  .body-scroll {
+    overflow-y: visible;
+  }
 }
 
 .navigation__container {
@@ -156,12 +171,16 @@ h1, h2, h3, p {
   }
 }
 
-.navigation__navlinks li {
+.navigation__navlinks .nav-link {
   margin-left: 2rem;
 }
 
-.navigation__navlink {
-  color: #fff;
+.navigation__navlinks .social {
+  margin-left: 2rem;
+}
+
+.navigation__navlinks .social-link {
+  margin-left: 2rem;
 }
 
 .navigation__toggle {
@@ -187,9 +206,9 @@ h1, h2, h3, p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -210,6 +229,10 @@ h1, h2, h3, p {
 
 .navigation .hamburger li {
   margin: 5rem 0;
+}
+
+.navigation .hamburger .social-link {
+  margin-right: 2rem;
 }
 
 .navigation .hamburger-active {
@@ -435,6 +458,57 @@ h1, h2, h3, p {
   grid-row: 5/7;
 }
 
+.gallery .modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  z-index: 100;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.gallery .modal img {
+  height: auto;
+  width: 90%;
+}
+
+@media (min-width: 768px) {
+  .gallery .modal img {
+    width: 80%;
+  }
+}
+
+@media (min-width: 992px) {
+  .gallery .modal img {
+    width: 70%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .gallery .modal img {
+    width: 50%;
+  }
+}
+
+.gallery .modal-active {
+  visibility: visible;
+  opacity: 1;
+}
+
 .contact {
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../images/cannon.jpg");
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/cannon.jpg");
@@ -467,7 +541,7 @@ h1, h2, h3, p {
       grid-template-columns: 1fr;
   gap: 2rem;
   background-color: #ffffff26;
-  padding: 3rem;
+  padding: 2rem 1rem;
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
 }
@@ -476,6 +550,7 @@ h1, h2, h3, p {
   .contact__grid {
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
+    padding: 3rem;
   }
 }
 

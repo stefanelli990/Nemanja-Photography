@@ -11,7 +11,7 @@
 //bg image 
 
 .landing-page {
-    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../images/bg-image.jpeg');
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../images/bg-image.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position:  center;
@@ -32,6 +32,9 @@
 
 .body-scroll {
     overflow-y: hidden;
+    @include md {
+        overflow-y: visible;
+    }
 }
 
 //navigation
@@ -54,13 +57,20 @@
         @include md {
             display: flex;
         }
-        li {
+        .nav-link {
+            margin-left: 2rem;
+            
+           
+        }
+        .social {
             margin-left: 2rem;
         }
+        .social-link {
+            margin-left: 2rem;
+        }
+
     }
-    &__navlink {
-        color: $light;
-    }
+    
 
     &__toggle {
         z-index: 50;
@@ -80,7 +90,7 @@
         width: 70%;
         height: 100vh;
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
         flex-direction: column;
         background-color: $dark;
@@ -91,6 +101,9 @@
       li {
           margin: 5rem 0;
       }
+      .social-link {
+        margin-right: 2rem;
+    }
     }
 
     
@@ -254,6 +267,43 @@
           grid-row: 5/7;
       }
 
+      .modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.85);
+        visibility: hidden;
+        opacity: 0;
+        transition: 0.3s;
+        z-index: 100;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        img {
+            
+            height: auto;
+            width: 90%;
+            @include md {
+                width: 80%;
+            }
+            @include lg {
+                width: 70%;
+            }
+            @include xl {
+                width: 50%;
+            }
+            
+        }
+      }
+    
+      .modal-active {
+        visibility: visible;
+        opacity: 1;
+      }
+
 }
 
 .contact {
@@ -276,11 +326,11 @@
         grid-template-columns: 1fr;
         gap: 2rem;
         background-color: #ffffff26;
-    padding: 3rem;
+    padding: 2rem 1rem;
     backdrop-filter: blur(10px);
         @include md {
             grid-template-columns: 1fr 1fr;
-            
+            padding: 3rem;
         }
     }
 
@@ -396,6 +446,8 @@
 
    
 }
+
+
 
 
 

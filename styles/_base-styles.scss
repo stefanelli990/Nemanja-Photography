@@ -10,6 +10,10 @@
    
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     
     color: $light;
@@ -61,10 +65,10 @@ h1,h2,h3, p {
 }
 
 .social {
+    display: flex;
+    
     a {
         color: $light;
-        margin: 0 1rem;
-        
         transition: 0.3s;
         &:hover {
             color: $accent;

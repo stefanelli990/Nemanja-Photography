@@ -12,7 +12,7 @@
     @extend %hamburger-bars;
   }
   
-  %navlink {
+  %nav-link {
       color: $light;
       transition: 0.3s;
       &:hover {
@@ -20,6 +20,8 @@
       }
   }
 
-  .navlink {
-      @extend %navlink;
+  .nav-link {
+      @extend %nav-link;
   }
+
+  
