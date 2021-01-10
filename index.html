@@ -126,25 +126,25 @@
         <h1 class="heading">get in touch</h1>
         <div class="contact__grid">
         <div class="contact__form">
-            <form name="portfolio-form" method="post" netlify>
+            <form name="contact-form" method="POST" data-netlify="true">
                 <div class="input-field name">
-                  <input type="text" id="name" required autocomplete="off"/>
+                  <input type="text" id="name" name="name" required autocomplete="off"/>
                   <label for="name">Your name:</label>
                 </div>
                 <div class="input-field email">
-                  <input type="text" id="email" required autocomplete="off"/>
+                  <input type="text" id="email" name="email" required autocomplete="off"/>
                   <label for="email">Your e-mail:</label>
                 </div>
                 <div class="input-field phone" >
-                  <input type="text" id="phone" required autocomplete="off"/>
+                  <input type="text" id="phone" name="phone" required autocomplete="off"/>
                   <label for="phone">Your phone:</label>
                 </div>
                 <div class="input-field textarea" >
-                  <textarea id="textarea" required autocomplete="off" cols="10" rows="5" style="resize:none"></textarea>
+                  <textarea name="textarea" id="textarea" required autocomplete="off" cols="10" rows="5" style="resize:none"></textarea>
                   <label for="textarea">Your message:</label>
                 </div>
               
-                <button class="btn">Send Message</button>
+                <button type="submit" class="btn">Send Message</button>
               </form>
         </div>
         <div class="contact__info">
