@@ -18,6 +18,9 @@ body {
     
     color: $light;
     overflow-x: hidden;
+    @include xs {
+        font-size: 0.8rem;
+    }
 }
 
 li {
@@ -30,7 +33,7 @@ a {
 }
 
 h1,h2,h3, p {
-    padding-bottom: 1rem;
+    margin-bottom: 1rem;
 }
 
 .btn {

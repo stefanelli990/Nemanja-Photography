@@ -18,6 +18,12 @@ body {
   overflow-x: hidden;
 }
 
+@media (max-width: 350px) {
+  body {
+    font-size: 0.8rem;
+  }
+}
+
 li {
   list-style-type: none;
 }
@@ -27,7 +33,7 @@ a {
 }
 
 h1, h2, h3, p {
-  padding-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 .btn {
@@ -357,7 +363,7 @@ h1, h2, h3, p {
 
 .services i {
   color: #FF7A00;
-  padding-bottom: 1rem;
+  margin-bottom: 0.5rem;
   font-size: 3rem;
 }
 
@@ -522,7 +528,6 @@ h1, h2, h3, p {
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
-  color: #fff;
 }
 
 @media (min-width: 768px) {
@@ -546,6 +551,12 @@ h1, h2, h3, p {
           backdrop-filter: blur(10px);
 }
 
+@media (max-width: 350px) {
+  .contact__grid {
+    padding: 2rem 0.5rem;
+  }
+}
+
 @media (min-width: 768px) {
   .contact__grid {
     -ms-grid-columns: 1fr 1fr;
@@ -554,38 +565,25 @@ h1, h2, h3, p {
   }
 }
 
-.contact__info {
+.contact form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  text-align: center;
-}
-
-.contact__info div {
-  margin: 4rem 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media (min-width: 768px) {
-  .contact__info div {
-    margin: unset;
+  .contact form {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
-}
-
-.contact__info i {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-  color: #FF7A00;
-}
-
-.contact__info a {
-  color: #fff;
 }
 
 .contact .input-field {
@@ -640,104 +638,47 @@ h1, h2, h3, p {
   color: #FF7A00;
 }
 
-.contact .name {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 1;
-  grid-column: 1 / 2;
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 1;
-  grid-row: 1 / 2;
-}
-
-@media (min-width: 768px) {
-  .contact .name {
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 1;
-    grid-column: 1 / 2;
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 1;
-    grid-row: 1 / 2;
+@media (max-width: 350px) {
+  .contact .input-field input:focus ~ label,
+  .contact .input-field input:valid ~ label,
+  .contact .input-field textarea:focus ~ label,
+  .contact .input-field textarea:valid ~ label {
+    font-size: 0.6rem;
   }
 }
 
-.contact .email {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 1;
-  grid-column: 1 / 2;
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 1;
-  grid-row: 2 / 3;
+.contact__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+.contact__info div {
+  margin: 4rem 0;
 }
 
 @media (min-width: 768px) {
-  .contact .email {
-    -ms-grid-column: 2;
-    -ms-grid-column-span: 1;
-    grid-column: 2 / 3;
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 1;
-    grid-row: 1 / 2;
+  .contact__info div {
+    margin: unset;
   }
 }
 
-.contact .phone {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 1;
-  grid-column: 1 / 2;
-  -ms-grid-row: 3;
-  -ms-grid-row-span: 1;
-  grid-row: 3 / 4;
+.contact__info i {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #FF7A00;
 }
 
-@media (min-width: 768px) {
-  .contact .phone {
-    -ms-grid-column: 3;
-    -ms-grid-column-span: 1;
-    grid-column: 3 / 4;
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 1;
-    grid-row: 1 / 2;
-  }
-}
-
-.contact .textarea {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 1;
-  grid-column: 1/ 2;
-  -ms-grid-row: 4;
-  -ms-grid-row-span: 1;
-  grid-row: 4/ 5;
-}
-
-@media (min-width: 768px) {
-  .contact .textarea {
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 3;
-    grid-column: 1 / 4;
-    -ms-grid-row: 2;
-    -ms-grid-row-span: 1;
-    grid-row: 2/ 3;
-  }
-}
-
-.contact button {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 1;
-  grid-column: 1 / 2;
-  -ms-grid-row: 5;
-  -ms-grid-row-span: 1;
-  grid-row: 5 / 6;
-}
-
-@media (min-width: 768px) {
-  .contact button {
-    -ms-grid-column: 3;
-    -ms-grid-column-span: 1;
-    grid-column: 3 / 4;
-    -ms-grid-row: 3;
-    -ms-grid-row-span: 1;
-    grid-row: 3 / 4;
-  }
+.contact__info a {
+  color: #fff;
 }
 
 .footer {

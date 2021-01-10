@@ -208,7 +208,7 @@
     }
     i {
         color: $accent;
-        padding-bottom: 1rem;
+        margin-bottom: 0.5rem;
         font-size: 3rem;
     }
    
@@ -317,8 +317,6 @@
         @include md {
             @include container(10rem 1rem, 1200px);
         }
-        
-        color: $light;
     }
 
     &__grid {
@@ -328,35 +326,26 @@
         background-color: #ffffff26;
     padding: 2rem 1rem;
     backdrop-filter: blur(10px);
+        @include xs {
+            padding: 2rem 0.5rem;
+        }
         @include md {
             grid-template-columns: 1fr 1fr;
             padding: 3rem;
         }
+        
     }
 
-    &__info {
-        div {
-            margin: 4rem 0;
-            @include md {
-                margin: unset;
-            }
-        }
+   
+
+    form {
         display: flex;
-            justify-content: space-between;
-            flex-direction: column;
-           text-align: center;
-        i {
-            font-size: 2rem;
-            margin-bottom: 0.5rem;
-            color: $accent;
-        }
-        a {
-            color: $light;
-            
+        flex-direction: column;
+        align-items: center;
+        @include md {
+            align-items: flex-start;
         }
     }
-
-    
 
     .input-field {
         position: relative;
@@ -398,53 +387,35 @@
             font-size: 14px;
             top: -24px;
             color: $accent;
+            @include xs {
+                font-size: 0.6rem;
+            }
           }
         }
       }
-      .name {
-        grid-column: 1 / 2;
-        grid-row: 1 / 2;
-        @include md {
-            grid-column: 1 / 2;
-            grid-row: 1 / 2;
-        }
-    }
-    .email {
-        grid-column: 1 / 2; 
-        grid-row: 2 / 3;
-        @include md {
-            grid-column: 2 / 3;
-            grid-row: 1 / 2;
-        }
-    }
 
-    .phone {
-        grid-column: 1 / 2;
-        grid-row: 3 / 4;
-        @include md {
-            grid-column: 3 / 4;
-            grid-row: 1 / 2;
-        }
-    }
-    .textarea {
-        grid-column: 1/ 2;
-        grid-row:  4/ 5;
-        @include md {
-            grid-column: 1 / 4;
-            grid-row: 2/ 3;
-        }
-    }
-    button {
-        grid-column: 1 / 2;
-        grid-row: 5 / 6;
-        @include md {
-            grid-column: 3 / 4;
-            grid-row: 3 / 4;
-        }
-        
-    }
 
-   
+      &__info {
+        div {
+            margin: 4rem 0;
+            @include md {
+                margin: unset;
+            }
+        }
+        display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+           text-align: center;
+        i {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            color: $accent;
+        }
+        a {
+            color: $light;
+            
+        }
+    }
 }
 
 
