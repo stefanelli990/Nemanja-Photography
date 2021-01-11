@@ -329,7 +329,7 @@
         grid-template-columns: 1fr;
         gap: 2rem;
         background-color: #ffffff26;
-        padding: 2rem 1rem;
+        padding: 3rem 1rem;
         backdrop-filter: blur(10px);
         @include xs {
             padding: 2rem 0.5rem;
@@ -402,7 +402,7 @@
 
       &__info {
         div {
-            margin: 4rem 0;
+            margin: 2rem 0;
             @include md {
                 margin: unset;
             }

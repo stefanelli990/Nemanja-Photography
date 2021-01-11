@@ -550,7 +550,7 @@ h1, h2, h3, p {
       grid-template-columns: 1fr;
   gap: 2rem;
   background-color: #ffffff26;
-  padding: 2rem 1rem;
+  padding: 3rem 1rem;
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
 }
@@ -666,7 +666,7 @@ h1, h2, h3, p {
 }
 
 .contact__info div {
-  margin: 4rem 0;
+  margin: 2rem 0;
 }
 
 @media (min-width: 768px) {
