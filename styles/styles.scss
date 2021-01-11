@@ -4,7 +4,7 @@
 @import 'base-styles';
 @import 'media-query';
 @import 'extends';
-
+@import 'contact-form';
 
 
 
@@ -337,12 +337,13 @@
 }
 
 .contact {
-    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../images/cannon.jpg');
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../images/canon.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position:  center;
     
     &__container {
+        
         @include container(5rem 1rem, 1200px);
         @include md {
             @include container(10rem 1rem, 1200px);
@@ -355,7 +356,8 @@
         grid-template-columns: 1fr;
         gap: 2rem;
         padding: 3rem 1rem;
-        background-color: #ffffff26;
+        background-color: #88888845;
+        backdrop-filter: blur(0.5rem);
         
         @include xs {
             padding: 2rem 0.5rem;
@@ -368,64 +370,6 @@
     }
 
    
-
-    form {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        @include md {
-            align-items: flex-start;
-        }
-    }
-
-    .input-field {
-        position: relative;
-        width: 100%;
-        margin-bottom: 40px;
-        text-align: left;
-        
-        label {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          color: $light;
-          transition: 0.3s;
-          cursor: text;
-        }
-        input,
-        textarea {
-          width: 100%;
-          border: 0;
-          outline: 0;
-          padding: 0.5rem 0;
-          border-bottom: 1px solid $light;
-          background-color: transparent;
-          box-shadow: none;
-          color:$light;
-          transition: 0.3s;
-          &:invalid {
-            outline: 0;
-          }
-          &:focus,
-          &:valid {
-            border-color: $accent;
-           
-            
-          }
-          &:focus ~ label,
-          &:valid ~ label {
-            font-size: 14px;
-            top: -24px;
-            color: $accent;
-            @include xs {
-                font-size: 0.6rem;
-            }
-          }
-        }
-      }
-
-
       &__info {
         div {
             margin: 2rem 0;
