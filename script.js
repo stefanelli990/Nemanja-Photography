@@ -3,7 +3,7 @@ const hamburgerMenu = document.querySelector('.hamburger');
 const body = document.querySelector('body');
 const landingPage = document.querySelector('.landing-page');
 const navLinks = document.querySelectorAll('.nav-link');
-const images = document.querySelectorAll('.images');
+const images = document.querySelectorAll('.overlay');
 const modal = document.querySelector('.modal');
 const modalImg = document.querySelector('.modal-image');
 
@@ -43,7 +43,7 @@ images.forEach(image => {
         body.classList.add('disable-scroll-images');
 
         //dynamicaly change image
-        const imgSrc = image.getAttribute('src');
+        const imgSrc = image.previousElementSibling.getAttribute('src');
         modalImg.src = `${imgSrc}`;
     });
 });
