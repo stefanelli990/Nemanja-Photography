@@ -13,6 +13,7 @@
   }
   
   %nav-link {
+      text-transform: capitalize;
       color: $light;
       transition: 0.3s;
       &:hover {

@@ -3,9 +3,7 @@ const hamburgerMenu = document.querySelector('.hamburger');
 const body = document.querySelector('body');
 const landingPage = document.querySelector('.landing-page');
 const navLinks = document.querySelectorAll('.nav-link');
-const images = document.querySelectorAll('.overlay');
-const modal = document.querySelector('.modal');
-const modalImg = document.querySelector('.modal-image');
+
 
 //hamburger menu slide
 toggle.addEventListener('click', () => {
@@ -36,26 +34,12 @@ window.addEventListener('scroll', () => {
 });
 
 
-//gallery image open
-images.forEach(image => {
-    image.addEventListener('click', () => {
-        modal.classList.add('modal-active');
-        body.classList.add('disable-scroll-images');
+//glightbox
 
-        //dynamicaly change image
-        const imgSrc = image.previousElementSibling.getAttribute('src');
-        modalImg.src = `${imgSrc}`;
-    });
-});
-
-// close image 
-modal.addEventListener('click', (e) => {
-    if(e.target.classList.contains('modal')) {
-        modal.classList.remove('modal-active');
-        body.classList.remove('disable-scroll-images');
-        
-    }
-});
+const lightbox = GLightbox({ 
+    zoomable: false
+    
+ });
 
 
 
