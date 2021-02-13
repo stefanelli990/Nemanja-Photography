@@ -21,7 +21,7 @@
 
 .landing-page-active {
     right: 70%;
-    @include lg {
+    @include md {
         right: 0;
     }
     
@@ -29,7 +29,7 @@
 
 .body-scroll {
     overflow-y: hidden;
-    @include lg {
+    @include md {
         overflow-y: visible;
     }
 }
@@ -78,29 +78,26 @@
     &__navlinks {
 
         display: none;
-        @include lg {
+        @include md {
             display: flex;
         }
         .nav-link {
-            margin: 0 1rem;
-            
-           
+            margin-left: 1.5rem;
         }
     }
     
     &__languages {
-        display: none;
-        
+        margin-left: 2.5rem;
+        display: flex;
         a {
             margin-left: 1rem;
-            
-        }
-        @include lg {
-            display: block;
+            transition: 0.3s;
+            &:hover {
+                color: $accent;
+            }
         }
         .en {
-            border-bottom: 2px solid $accent;
-            padding-bottom: 0.5rem;
+            color: $accent;
         }
     }
 
@@ -108,7 +105,7 @@
         z-index: 50;
         cursor: pointer;
         transition: 0.5s;
-       @include lg {
+       @include md {
            display: none;
        }
     
@@ -127,7 +124,7 @@
         flex-direction: column;
         background-color: $dark;
         transition: 0.5s;
-        @include lg {
+        @include md {
             display: none;
         }
       li {
@@ -167,7 +164,6 @@
   }
 
 //showcase 
-
 .showcase {
     &__container {
         @include container(0rem 1rem, 1200px);
@@ -179,16 +175,22 @@
         flex-direction: column;
         color: $light;
         text-align: center;
-        @include lg {
+        @include md {
             text-align: left;
-            @include container(0 20rem 0 1rem, 1200px);
+           
         }
         
     }
 
+    &__text {
+        @include md {
+            padding-right: 25%;
+        }
+    }
+
     &__social-vertical {
         display: none;
-        @include lg {
+        @include md {
             display: block;
         position: absolute;
         right: 1rem;     
@@ -211,6 +213,12 @@
         li {
             margin: 2rem 0;
         }
+        a {
+            transition: 0.3s;
+            &:hover {
+                color: $accent;
+            }
+        }
     }
     }
 
@@ -220,28 +228,25 @@
         left: 50%;
         transform: translate(-50%);
         display: flex;
-        @include lg {
+        @include md {
             display: none;
         }
         li {
             margin: 0 1rem;
         }
     }
-   
-   
     h1 {
         font-size: 1.5rem;
         text-transform: uppercase;
-        @include lg {
+        @include md {
             font-size: 3.5rem;
         }
     }
     p {
-       @include lg {
+       @include md {
            font-size: 1.5rem;
        }
     }
-    
 }
 
 
@@ -283,8 +288,6 @@
     }
 }
 
-
-
 //gallery
 .gallery {
     background-color: lighten($dark, 2);
@@ -293,39 +296,118 @@
         @include md {
             @include container(10rem 1rem, 1200px);
         }
+        
     }
     
     
+  
+      .swiper-slide {
+        background-size: cover;
+        background-position: center;
+      }
+  
+      .gallery-top {
+        height: 40%;
+        width: 100%;
+        @include sm {
+            height: 60%;
+        }
+        @include md {
+            height: 70%;
+        }
+        @include lg {
+            height: 80%;
+        }
+       
+      }
+  
+      .gallery-thumbs {
+        height: 15%;
+        box-sizing: border-box;
+        padding: 10px 0;
+        @include sm {
+            height: 20%;
+        }
+        @include md {
+            height: 25%;
+        }
+        @include lg {
+            height: 30%;
+        }
 
-    &__grid-container {
+      }
+  
+      .gallery-thumbs .swiper-slide {
+        width: 25%;
+        height: 100%;
+        opacity: 0.4;
+      }
+  
+      .gallery-thumbs .swiper-slide-thumb-active {
+        opacity: 1;
+      }
+      .swiper-button-next,
+      .swiper-button-prev {
+        color: $accent;
+      }
+}
+
+
+//about 
+.about {
+    background-color: $dark;
+    &__container {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 1rem;
-
-        img {
-            
-            width: 100%;
-            height: 100px;
-            object-fit: cover;
-            @include sm {
-                height: 200px
-            }
-            @include md {
-                height: 300px;
-            }
-            @include lg {
-                height: 400px;
-            }
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        @include md {
+            grid-template-columns: 0.7fr 1.3fr;
+            gap: 4rem;
+        }
+        @include container(5rem 1rem, 1200px);
+        @include md {
+            @include container(10rem 1rem, 1200px);
+        }
+    }
+   
+    &__text {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        @include md {
+            grid-column: 2 /3;
+            grid-row: 1/2;
+            align-items: flex-start;
+            text-align: left;
+        }
+        .heading {
+            margin-bottom: 2rem;
         }
     }
 
+    &__image {
+        img {
+            width: 100%;
+           
+        }
+    }
     
-   
 }
+
+
+
+
 
 .contact {
     
-    background-color: $dark;
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../images/canon.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:  center;
     &__container {
         
         @include container(5rem 1rem, 1200px);
