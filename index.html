@@ -6,8 +6,9 @@
     <title>Nemanja Photography</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
     <link rel="stylesheet" href="styles/styles.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
-<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+    <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" /> -->
 </head>
 <body>
     
@@ -97,7 +98,33 @@
         <h3 class="above-heading">gallery</h3>
         <h1 class="heading">my latest works</h1>
          
-        <div class="swiper-container gallery-top">
+        <div class="gallery__grid">
+        <a href="images/gallery1.jpg" id="img1" class="glightbox">
+            <img src="images/gallery1.jpg" alt="image" />
+          </a>
+        <a href="images/gallery2.jpg" id="img2" class="glightbox">
+            <img src="images/gallery2.jpg" alt="image" />
+          </a>
+        <a href="images/gallery3.jpg" id="img3" class="glightbox">
+            <img src="images/gallery3.jpg" alt="image" />
+          </a>
+        <a href="images/gallery5.jpg" id="img4" class="glightbox">
+            <img src="images/gallery5.jpg" alt="image" />
+          </a>
+        <a href="images/gallery5.jpg" id="img5" class="glightbox">
+            <img src="images/gallery5.jpg" alt="image" />
+          </a>
+        <a href="images/gallery4.jpg" id="img6" class="glightbox">
+            <img src="images/gallery4.jpg" alt="image" />
+          </a>
+        <a href="images/gallery2.jpg" id="img7" class="glightbox">
+            <img src="images/gallery2.jpg" alt="image" />
+          </a>
+       
+        
+        </div>
+
+        <!-- <div class="swiper-container gallery-top">
             <div class="swiper-wrapper">
               <div class="swiper-slide" style="background-image:url(./images/gallery1.jpg)"></div>
               <div class="swiper-slide" style="background-image:url(./images/gallery2.jpg)"></div>
@@ -110,7 +137,7 @@
               <div class="swiper-slide" style="background-image:url(./images/gallery9.jpg)"></div>
               <div class="swiper-slide" style="background-image:url(./images/gallery10.jpg)"></div>
             </div>
-            <!-- Add Arrows -->
+    
             <div class="swiper-button-next swiper-button-white"></div>
             <div class="swiper-button-prev swiper-button-white"></div>
           </div>
@@ -127,8 +154,9 @@
                 <div class="swiper-slide" style="background-image:url(./images/gallery9.jpg)"></div>
                 <div class="swiper-slide" style="background-image:url(./images/gallery10.jpg)"></div>
             </div>
-          </div>
+          </div> -->
         
+         
             
        
     </div>
@@ -192,8 +220,7 @@
 
 
 
-<script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
