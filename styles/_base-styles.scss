@@ -44,9 +44,9 @@ i {
     padding: 1rem 2.5rem;
     background-color: $accent;
     color: $light;
-    border: 2px solid $accent;
+    border: 1px solid $accent;
     transition: 0.3s;
-    border-radius: 30px;
+    border-radius: 25px;
     text-transform: capitalize;
     cursor: pointer;
     &:hover {
