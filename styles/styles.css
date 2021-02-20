@@ -9,6 +9,10 @@
   letter-spacing: 1px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   color: #fff;
   overflow-x: hidden;
