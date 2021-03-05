@@ -1,11 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap');
-@import 'variables';
-@import 'mixins';
-@import 'base-styles';
 @import 'media-query';
-@import 'extends';
-
-
+@import 'config';
 
 
 //bg image 
@@ -16,7 +11,7 @@
     background-position:  center;
     position: relative;
     right: 0;
-    transition: 0.5s;
+    transition: $transition;
 } 
 
 .landing-page-active {
@@ -91,7 +86,7 @@
         display: flex;
         a {
             margin-left: 1rem;
-            transition: 0.3s;
+            transition: $transition;
             &:hover {
                 color: $accent;
             }
@@ -104,7 +99,7 @@
     &__toggle {
         z-index: 50;
         cursor: pointer;
-        transition: 0.5s;
+        transition: $transition;
        @include md {
            display: none;
        }
@@ -124,7 +119,7 @@
         align-items: center;
         flex-direction: column;
         background-color: $dark;
-        transition: 0.5s;
+        transition: $transition;
         @include md {
             display: none;
         }
@@ -138,7 +133,7 @@
             margin: 0 1rem;
         }
         a {
-            transition: 0.3s;
+            transition: $transition;
             &:hover {
                 color: $accent;
             }
@@ -230,7 +225,7 @@
         overflow: hidden;
         text-align: center;
         &::before, &::after {
-            background-color: rgba($light, 0.5);
+            background-color: $light;
             content: "";
             display: inline-block;
             height: 10rem;
@@ -245,7 +240,7 @@
             margin: 2rem 0;
         }
         a {
-            transition: 0.3s;
+            transition: $transition;
             &:hover {
                 color: $accent;
             }
@@ -267,17 +262,13 @@
         }
     }
     h1 {
-        font-size: 1.5rem;
+        font-size: 2.5rem;
         text-transform: uppercase;
         @include md {
             font-size: 3.5rem;
         }
     }
-    p {
-       @include md {
-           font-size: 1.5rem;
-       }
-    }
+    
 }
 
 
@@ -394,7 +385,7 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
-        transition: 0.3s;
+        transition: $transition;
         &:hover {
             opacity: 0.5;
         }
@@ -487,7 +478,7 @@
         }
         input, textarea {
             
-            border-radius: 25px;
+            border-radius: $border-radius;
             width: 100%;
             padding: 1rem;
             margin-bottom: 1rem;
@@ -495,7 +486,7 @@
             border: 1px solid transparent;
             background-color: rgba($light, 0.05);
             // border-bottom: 1px solid $light;
-            transition: 0.3s;
+            transition: $transition;
             color: $light;
             &:focus {
                 border: 1px solid $accent;

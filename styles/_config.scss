@@ -1,5 +1,11 @@
-@import 'media-query';
+//variables
+$light: #fff;
+$dark: #181818;
+$accent: #FF7A00;
+$border-radius: 30px;
+$transition: all 0.3s ease;
 
+//resets
 * {
     margin: 0;
     padding: 0;
@@ -12,15 +18,17 @@
 
 html {
     scroll-behavior: smooth;
+    font-size: 0.8rem;
+    @include sm {
+        font-size: 1rem;
+    }
 }
 
 body {
     
     color: $light;
     overflow-x: hidden;
-    @include xs {
-        font-size: 0.9rem;
-    }
+   
 }
 
 li {
@@ -40,13 +48,15 @@ i {
     font-size: 1.2rem;
 }
 
+
+//utilities
 .btn {
     padding: 1rem 2.5rem;
     background-color: $accent;
     color: $light;
     border: 1px solid $accent;
-    transition: 0.3s;
-    border-radius: 25px;
+    transition: $transition;
+    border-radius: $border-radius;
     text-transform: capitalize;
     cursor: pointer;
     &:hover {
@@ -79,12 +89,53 @@ i {
     
     a {
         color: $light;
-        transition: 0.3s;
+        transition: $transition;
         &:hover {
             color: $accent;
         }
     }
 }
 
+//extends
+%hamburger-bars {
+    width: 30px;
+    height: 2px;
+    background-color: $light;
+    margin: 7px 0;
+    transition: $transition;
+  }
+  
+  .bar1,
+  .bar2,
+  .bar3 {
+    @extend %hamburger-bars;
+  }
+  
+  %nav-link {
+      text-transform: capitalize;
+      color: $light;
+      transition: $transition;
+      &:hover {
+          color: $accent;
+      }
+  }
 
+  .nav-link {
+      @extend %nav-link;
+  }
 
+  //mixins
+  @mixin container($padding, $max-width) {
+    padding: $padding;
+    max-width: $max-width;
+    width: 100%;
+    margin: 0 auto;
+}
+
+@function set-text-color($background-color) {
+    @if(lightness($background-color) > 70) {
+        @return $dark;
+    } @else {
+        @return $light;
+    }
+}

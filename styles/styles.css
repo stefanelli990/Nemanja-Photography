@@ -11,17 +11,18 @@
 
 html {
   scroll-behavior: smooth;
+  font-size: 0.8rem;
+}
+
+@media (min-width: 600px) {
+  html {
+    font-size: 1rem;
+  }
 }
 
 body {
   color: #fff;
   overflow-x: hidden;
-}
-
-@media (max-width: 600px) {
-  body {
-    font-size: 0.9rem;
-  }
 }
 
 li {
@@ -46,9 +47,9 @@ i {
   background-color: #FF7A00;
   color: #fff;
   border: 1px solid #FF7A00;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-  border-radius: 25px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  border-radius: 30px;
   text-transform: capitalize;
   cursor: pointer;
 }
@@ -86,8 +87,8 @@ i {
 
 .social a {
   color: #fff;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .social a:hover {
@@ -101,15 +102,15 @@ i {
   height: 2px;
   background-color: #fff;
   margin: 7px 0;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .nav-link {
   text-transform: capitalize;
   color: #fff;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .nav-link:hover {
@@ -124,8 +125,8 @@ i {
   background-position: center;
   position: relative;
   right: 0;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .landing-page-active {
@@ -210,8 +211,8 @@ i {
 
 .navigation__languages a {
   margin-left: 1rem;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .navigation__languages a:hover {
@@ -225,8 +226,8 @@ i {
 .navigation__toggle {
   z-index: 50;
   cursor: pointer;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 @media (min-width: 768px) {
@@ -256,8 +257,8 @@ i {
       -ms-flex-direction: column;
           flex-direction: column;
   background-color: #181818;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 @media (min-width: 768px) {
@@ -277,8 +278,8 @@ i {
 }
 
 .navigation .hamburger a {
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .navigation .hamburger a:hover {
@@ -389,7 +390,7 @@ i {
     text-align: center;
   }
   .showcase__social-vertical::before, .showcase__social-vertical::after {
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: #fff;
     content: "";
     display: inline-block;
     height: 10rem;
@@ -404,8 +405,8 @@ i {
     margin: 2rem 0;
   }
   .showcase__social-vertical a {
-    -webkit-transition: 0.3s;
-    transition: 0.3s;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
   }
   .showcase__social-vertical a:hover {
     color: #FF7A00;
@@ -434,19 +435,13 @@ i {
 }
 
 .showcase h1 {
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   text-transform: uppercase;
 }
 
 @media (min-width: 768px) {
   .showcase h1 {
     font-size: 3.5rem;
-  }
-}
-
-@media (min-width: 768px) {
-  .showcase p {
-    font-size: 1.5rem;
   }
 }
 
@@ -627,8 +622,8 @@ i {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .gallery img:hover {
@@ -778,15 +773,15 @@ i {
 }
 
 .contact form input, .contact form textarea {
-  border-radius: 25px;
+  border-radius: 30px;
   width: 100%;
   padding: 1rem;
   margin-bottom: 1rem;
   outline: none;
   border: 1px solid transparent;
   background-color: rgba(255, 255, 255, 0.05);
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
   color: #fff;
 }
 
