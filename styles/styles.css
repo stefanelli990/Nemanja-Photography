@@ -368,6 +368,10 @@ i {
   }
 }
 
+.showcase__text {
+  text-transform: uppercase;
+}
+
 @media (min-width: 768px) {
   .showcase__text {
     padding-right: 25%;
@@ -439,10 +443,14 @@ i {
   text-transform: uppercase;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .showcase h1 {
     font-size: 3.5rem;
   }
+}
+
+.showcase .capture {
+  color: #FF7A00;
 }
 
 .services {

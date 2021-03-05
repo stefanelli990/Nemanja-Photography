@@ -208,6 +208,7 @@
     }
 
     &__text {
+        text-transform: uppercase;
         @include md {
             padding-right: 25%;
         }
@@ -264,11 +265,13 @@
     h1 {
         font-size: 2.5rem;
         text-transform: uppercase;
-        @include md {
+        @include lg {
             font-size: 3.5rem;
         }
     }
-    
+    .capture {
+        color: $accent;
+    }
 }
 
 
