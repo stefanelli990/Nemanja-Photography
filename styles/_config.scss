@@ -51,7 +51,11 @@ i {
 
 //utilities
 .btn {
-    padding: 1rem 2.5rem;
+    width: 100%;
+    max-width: 200px;
+    display: inline-block;
+    padding: 1rem;
+    text-align: center;
     background-color: $accent;
     color: $light;
     border: 1px solid $accent;

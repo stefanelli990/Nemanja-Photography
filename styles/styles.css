@@ -43,7 +43,11 @@ i {
 }
 
 .btn {
-  padding: 1rem 2.5rem;
+  width: 100%;
+  max-width: 200px;
+  display: inline-block;
+  padding: 1rem;
+  text-align: center;
   background-color: #FF7A00;
   color: #fff;
   border: 1px solid #FF7A00;
@@ -451,6 +455,10 @@ i {
 
 .showcase .capture {
   color: #FF7A00;
+}
+
+.showcase p {
+  font-size: 1.5rem;
 }
 
 .services {
