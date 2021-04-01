@@ -11,14 +11,13 @@ $transition: all 0.3s ease;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
-    line-height: 1.6;
     letter-spacing: 1px;
    
 }
 
 html {
     scroll-behavior: smooth;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     @include sm {
         font-size: 1rem;
     }
@@ -28,7 +27,7 @@ body {
     
     color: $light;
     overflow-x: hidden;
-   
+    line-height: 1.5;
 }
 
 li {
@@ -36,12 +35,25 @@ li {
 }
 
 a {
+    text-transform: capitalize;
     text-decoration: none;
     color: $light;
 }
 
 h1,h2,h3, p {
     margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-size: 1.17rem;
 }
 
 i {
@@ -51,17 +63,15 @@ i {
 
 //utilities
 .btn {
-    width: 100%;
-    max-width: 200px;
+    
     display: inline-block;
-    padding: 1rem;
+    padding: 1rem 2rem;
     text-align: center;
     background-color: $accent;
     color: $light;
     border: 1px solid $accent;
     transition: $transition;
     border-radius: $border-radius;
-    text-transform: capitalize;
     cursor: pointer;
     &:hover {
         background-color: transparent;
@@ -78,10 +88,6 @@ i {
 }
 
 .heading {
-    @include lg {
-        font-size: 2rem;
-        margin-bottom: 4rem;
-    }
     text-transform: capitalize;
     margin-bottom: 3rem;
     text-align: center;
@@ -116,7 +122,7 @@ i {
   }
   
   %nav-link {
-      text-transform: capitalize;
+   
       color: $light;
       transition: $transition;
       &:hover {

@@ -52,9 +52,13 @@
 
 //navigation
 .navigation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
     &__container {
-        @include container(0 1rem, 1200px);
-        height: 10vh;
+        @include container(2rem, 1200px);
+        
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -108,7 +112,7 @@
 
     .hamburger {
         
-        padding: 0 1rem;
+        padding: 0 2rem;
         position: fixed;
         top: 0;
         right: -70%;
@@ -133,6 +137,7 @@
             margin: 0 1rem;
         }
         a {
+            
             transition: $transition;
             &:hover {
                 color: $accent;
@@ -141,6 +146,7 @@
       &__navlinks {
         li {
             margin: 3rem 0;
+            
         }
         
         
@@ -191,24 +197,24 @@
 //showcase 
 .showcase {
     &__container {
-        @include container(0rem 1rem, 1200px);
+        @include container(0rem 2rem, 1200px);
         position: relative;
-        height: 90vh;
+        min-height: 100vh;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
         color: $light;
-        text-align: center;
+        text-align: left;
         @include md {
-            text-align: left;
-           
+          
+            min-height: 1000px;
         }
         
     }
 
     &__text {
-        text-transform: uppercase;
+        
         @include md {
             padding-right: 25%;
         }
@@ -263,8 +269,9 @@
         }
     }
     h1 {
-        font-size: 2.5rem;
-        text-transform: uppercase;
+        line-height: 1.3;
+        font-size: 2.3rem;
+        
         @include lg {
             font-size: 3.5rem;
         }
@@ -272,9 +279,7 @@
     .capture {
         color: $accent;
     }
-    p {
-        font-size: 1.5rem;
-    }
+    
 }
 
 
@@ -284,9 +289,9 @@
    
     &__container {
         text-align: center;
-        @include container(5rem 1rem, 1200px);
+        @include container(5rem 2rem, 1200px);
         @include md {
-            @include container(10rem 1rem, 1200px);
+            @include container(10rem 2rem, 1200px);
         }
     }
 
@@ -324,9 +329,9 @@
     background-color: lighten($dark, 2);
     &__container {
         
-        @include container(5rem 1rem, 1200px);
+        @include container(5rem 2rem, 1200px);
         @include md {
-            @include container(10rem 1rem, 1200px);
+            @include container(10rem 2rem, 1200px);
         } 
     }
 
@@ -411,9 +416,9 @@
             grid-template-columns: 0.7fr 1.3fr;
             gap: 4rem;
         }
-        @include container(5rem 1rem, 1200px);
+        @include container(5rem 2rem, 1200px);
         @include md {
-            @include container(10rem 1rem, 1200px);
+            @include container(10rem 2rem, 1200px);
         }
     }
    
@@ -456,9 +461,9 @@
     background-position:  center;
     &__container {
         
-        @include container(5rem 1rem, 960px);
+        @include container(5rem 2rem, 960px);
         @include md {
-            @include container(10rem 1rem, 960px);
+            @include container(10rem 2rem, 960px);
         }
     }
 
@@ -477,13 +482,14 @@
     }
 
     form {
+        
         text-align: center;
         flex: 1;
         @include lg {
             text-align: left;
         }
         input, textarea {
-            
+            font-size: 1rem;
             border-radius: $border-radius;
             width: 100%;
             padding: 1rem;
@@ -491,7 +497,6 @@
             outline: none;
             border: 1px solid transparent;
             background-color: rgba($light, 0.05);
-            // border-bottom: 1px solid $light;
             transition: $transition;
             color: $light;
             &:focus {
@@ -515,6 +520,7 @@
             margin-bottom: 0;
         }
         a {
+           
             transition: 0.3s;
             &:hover {
                 color: $accent;
