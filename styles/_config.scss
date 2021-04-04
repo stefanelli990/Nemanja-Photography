@@ -2,7 +2,7 @@
 $light: #fff;
 $dark: #181818;
 $accent: #FF7A00;
-$border-radius: 30px;
+$border-radius: 5px;
 $transition: all 0.3s ease;
 
 //resets
@@ -16,7 +16,7 @@ $transition: all 0.3s ease;
 }
 
 html {
-    scroll-behavior: smooth;
+    // scroll-behavior: smooth;
     font-size: 0.9rem;
     @include sm {
         font-size: 1rem;
@@ -24,7 +24,7 @@ html {
 }
 
 body {
-    
+    background-color: $dark;
     color: $light;
     overflow-x: hidden;
     line-height: 1.5;
@@ -35,9 +35,13 @@ li {
 }
 
 a {
-    text-transform: capitalize;
+    
     text-decoration: none;
     color: $light;
+    transition: 0.3s;
+            &:hover {
+                color: $accent;
+            }
 }
 
 h1,h2,h3, p {
@@ -63,9 +67,10 @@ i {
 
 //utilities
 .btn {
-    
     display: inline-block;
-    padding: 1rem 2rem;
+    padding: 1rem;
+    width: 100%;
+    max-width: 200px;
     text-align: center;
     background-color: $accent;
     color: $light;
@@ -73,6 +78,7 @@ i {
     transition: $transition;
     border-radius: $border-radius;
     cursor: pointer;
+    font-size: 1rem;
     &:hover {
         background-color: transparent;
         color: $accent;
@@ -80,30 +86,19 @@ i {
 
 }
 
-.above-heading {
-    margin-bottom: 0;
-    text-transform: capitalize;
-    color: $accent;
-    text-align: center;
-}
+
 
 .heading {
     text-transform: capitalize;
     margin-bottom: 3rem;
-    text-align: center;
-    
+    text-align: center;   
+    @include lg {
+        margin-bottom: 5rem;
+    }
 }
 
 .social {
     display: flex;
-    
-    a {
-        color: $light;
-        transition: $transition;
-        &:hover {
-            color: $accent;
-        }
-    }
 }
 
 //extends

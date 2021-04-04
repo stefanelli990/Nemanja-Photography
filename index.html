@@ -11,7 +11,7 @@
 </head>
 <body>
     
-
+<section class="parallax">
 
 <section class="landing-page"> 
 
@@ -60,7 +60,7 @@
 <main class="showcase">
     <div class="showcase__container">
         <div class="showcase__text">
-        <h1>Let's <span class="capture">capture</span> your beautiful moments</h1>
+        <h1>Let's capture your beautiful moments</h1>
         <p>I am Nemanja Mohenski, a photographer based in Nis.</p>
         <a href="#gallery" class="btn">View Gallery</a>
         <ul class="showcase__social-vertical">
@@ -77,22 +77,22 @@
 <!-- services -->
 <section class="services" id="services">
     <div class="services__container">
-        <h3 class="above-heading">services</h3>
-        <h2 class="heading">what can do for you</h2>
+       
+        <h1 class="heading">what can do for you</h1>
         <div class="services__grid">
             <div class="services__item">
                 <i class="fas fa-camera"></i>
-                <h3>Photo shooting</h3>
+                <h2>Photo shooting</h2>
                 <p>Photography in the studio, outdoors, staged photo session, shooting.</p>
             </div>
             <div class="services__item">
                 <i class="fas fa-video"></i>
-                <h3>Video shooting</h3>
+                <h2>Video shooting</h2>
                 <p>In addition to excellent photographs, professional video filming is carried out.</p>
             </div>
             <div class="services__item">
                 <i class="far fa-image"></i>
-                <h3>Retouch</h3>
+                <h2>Retouch</h2>
                 <p>All photos are processed and the customer receives the finished result.</p>
             </div>
         </div>
@@ -104,7 +104,7 @@
 <!-- gallery -->
 <section class="gallery" id="gallery">
     <div class="gallery__container">
-        <h3 class="above-heading">gallery</h3>
+    
         <h1 class="heading">my latest works</h1>
         <div class="gallery__grid">
         <a href="images/gallery1.jpg" id="img1" class="glightbox">
@@ -137,53 +137,62 @@
             <img src="images/about-img.jpg" alt="">
         </div>
         <div class="about__text">
-            <h3 class="above-heading">about</h3>
             <h1 class="heading">let's introduce myself</h1>
             <p>I started photographing few years ago. I like to photograph people most of all, but also like to photograph nature and landscapes. Beside photography, I love to travel where I also taking photos.</p>
-            <p>If you're interested in doing some quality photos, please contact me. I'm available for you.</p>
         </div>
     </div>
 </section>
 
-
+</section>
 
 <!-- contact -->
-<section class="contact" id="contact">
+<footer class="contact" id="contact">
     <div class="contact__container">
-        <h3 class="above-heading">contact</h3>
-        <h1 class="heading">get in touch</h1>
+        
         <div class="contact__flex-container">
-            <form name="contact__form" method="POST" data-netlify="true">
-                  <input type="text" id="name" name="name" required autocomplete="off" placeholder="Your name..."/>
-                  <input type="email" id="email" name="email" required autocomplete="off" placeholder="Your email..."/>
-                  <textarea name="textarea" id="textarea" required autocomplete="off" cols="10" rows="5" style="resize:none" placeholder="Write message..."></textarea>
-                  <button type="submit" class="btn">Send Message</button>
-              </form>
+            
         <div class="contact__info">
+        
+        <h1 class="heading">get in touch</h1>
+        <p>If you're interested in doing some quality photos, please contact me. I'm available for you.</p>
             <ul class="contact-details">
-                <li><h2>Email Me</h2><a href="mailto:nemanja.mohenski@gmail.com">nemanja.mohenski@gmail.com</a></li>
-                <li><h2>Call Me</h2><a href="tel:+381691019376">+381 (0)69 101 93 76</a></li>
+                <li><a href="mailto:nemanja.mohenski@gmail.com"><i class="fas fa-envelope"></i>nemanja.mohenski@gmail.com</a></li>
+                <li><a href="tel:+381691019376"><i class="fas fa-phone-alt"></i>+381 (0)69 101 93 76</a></li>
             </ul>
-            <ul>
-                <li><h2>Let's Be Social</h2></li>
-                <ul class="contact-social">
+            <ul class="social">
                     <li><a href="https://www.instagram.com/nemanjaphotography_/" class="social-link"><i class="fab fa-instagram"></i></a></li>
                     <li><a href="https://www.facebook.com/NM-Photography-102095008194968" class="social-link"><i class="fab fa-facebook-f"></i></a></li>
                     <li><a href="https://www.linkedin.com/in/nemanja-mohenski-0944bb1b5/" class="social-link"><i class="fab fa-linkedin-in"></i></a></li>
-                </ul>
             </ul>
             
         </div>
+        <form class="contact-form" name="contact-form" method="POST" data-netlify="true">
+            <div class="input-field">
+              <input name="name" type="text" id="name" required autocomplete="off"/>
+              <label for="name">Your Name</label>
+            </div>
+            <div class="input-field">
+              <input name="email" type="text" id="email" required autocomplete="off"/>
+              <label for="email">Your Email</label>
+            </div>
+            <div class="input-field">
+              <textarea name="textarea" id="textarea" required autocomplete="off"></textarea>
+              <label for="textarea">Write Message</label>
+            </div>
+            <button class="btn" type="submit">Send Message</button>
+          </form>
     </div>
     </div>
-</section>
 
-
-<footer class="footer">
-        <div class="footer-container">
+    <div class="contact-bottom">
+        <div class="contact-bottom__container">
             © 2021 Nemanja Photography. All rights reserved.
         </div>
+    </div>
 </footer>
+
+
+
 
 
 
