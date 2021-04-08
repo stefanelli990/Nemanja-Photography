@@ -207,7 +207,7 @@ i {
 
 @media (min-width: 768px) {
   .navigation__container {
-    padding: 1rem 2rem;
+    padding: 1rem;
     max-width: 1200px;
     width: 100%;
     margin: 0 auto;
@@ -408,7 +408,7 @@ i {
 
 @media (min-width: 768px) {
   .showcase__container {
-    padding: 0rem 2rem;
+    padding: 0rem 1rem;
     max-width: 1200px;
     width: 100%;
     margin: 0 auto;
@@ -521,7 +521,7 @@ i {
 
 @media (min-width: 768px) {
   .services__container {
-    padding: 10rem 2rem;
+    padding: 10rem 1rem;
     max-width: 1200px;
     width: 100%;
     margin: 0 auto;
@@ -580,7 +580,7 @@ i {
 
 @media (min-width: 768px) {
   .gallery__container {
-    padding: 10rem 2rem;
+    padding: 10rem 1rem;
     max-width: 1200px;
     width: 100%;
     margin: 0 auto;
@@ -714,7 +714,7 @@ i {
 
 @media (min-width: 768px) {
   .about__container {
-    padding: 10rem 2rem;
+    padding: 10rem 1rem;
     max-width: 1200px;
     width: 100%;
     margin: 0 auto;
@@ -794,7 +794,7 @@ i {
 
 @media (min-width: 768px) {
   .contact__container {
-    padding: 10rem 2rem;
+    padding: 10rem 1rem;
     max-width: 1200px;
     width: 100%;
     margin: 0 auto;
@@ -809,7 +809,6 @@ i {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 3rem;
 }
 
 @media (min-width: 768px) {
@@ -893,6 +892,7 @@ i {
 }
 
 .contact__info {
+  text-align: center;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -903,13 +903,14 @@ i {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media (min-width: 768px) {
   .contact__info {
+    text-align: left;
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
@@ -924,7 +925,7 @@ i {
 }
 
 .contact__info p {
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 .contact__info i {
@@ -940,8 +941,17 @@ i {
 }
 
 .contact__info .social li {
-  margin-right: 2rem;
-  margin-bottom: 0;
+  margin: 0 1rem;
+}
+
+@media (min-width: 768px) {
+  .contact__info .social li {
+    margin: 0 2rem 0 0;
+  }
+}
+
+.contact__details-mobile {
+  display: none;
 }
 
 .contact .contact-bottom__container {

@@ -85,7 +85,7 @@
         align-items: center;
 
         @include md {
-            @include container(1rem 2rem, 1200px);
+            @include container(1rem, 1200px);
         }
     }
 
@@ -232,7 +232,7 @@
         color: $light;
         text-align: center;
         @include md {
-            @include container(0rem 2rem, 1200px);
+            @include container(0rem 1rem, 1200px);
         }
         @include lg {
             
@@ -319,7 +319,7 @@
         
         @include container(5rem 1rem, 1200px);
         @include md {
-            @include container(10rem 2rem, 1200px);
+            @include container(10rem 1rem, 1200px);
         }
     }
 
@@ -357,7 +357,7 @@
         
         @include container(5rem 1rem, 1200px);
         @include md {
-            @include container(10rem 2rem, 1200px);
+            @include container(10rem 1rem, 1200px);
         } 
     }
 
@@ -444,7 +444,7 @@
         }
         @include container(5rem 1rem, 1200px);
         @include md {
-            @include container(10rem 2rem, 1200px);
+            @include container(10rem 1rem, 1200px);
         }
     }
    
@@ -495,7 +495,7 @@
         
         @include container(5rem 1rem, 1200px);
         @include md {
-            @include container(10rem 2rem, 1200px);
+            @include container(10rem 1rem, 1200px);
         }
     }
 
@@ -503,13 +503,15 @@
         
         display: flex;
         flex-direction: column;
-        gap: 3rem;
+       
        
         @include md {
             flex-direction: row;
          
         }
     }
+
+    
 
     .contact-form {
         background-color: rgba($dark, 0.8);
@@ -573,25 +575,26 @@
 
     &__info {
 
-        
+        text-align: center;
         flex: 1;
         display: flex;
         flex-direction: column;
         
-        align-items: flex-start;
+        align-items: center;
         @include md {
-           
+            text-align: left;
             align-items: flex-start;
             justify-content: center;
             
         }
+        
        
         h1 {
             margin-bottom: 2rem;
         }
 
         p {
-            margin-bottom: 3rem;
+            margin-bottom: 2rem;
         }
 
         i {
@@ -608,12 +611,24 @@
                 margin-right: 0;
             }
             li {
-                margin-right: 2rem;
-                margin-bottom: 0;
+                margin: 0 1rem;
+                @include md {
+                    
+                    margin: 0 2rem 0 0;
+                }
             }
         }
+
+      
+
       
     } 
+
+    &__details-mobile {
+        display: none;
+
+        
+    }
 
     .contact-bottom__container {
         @include container(2rem, 1200px);
