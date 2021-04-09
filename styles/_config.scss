@@ -17,7 +17,7 @@ $transition: all 0.3s ease;
 
 html {
     // scroll-behavior: smooth;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     @include sm {
         font-size: 1rem;
     }
@@ -70,7 +70,7 @@ i {
     display: inline-block;
     padding: 1rem;
     width: 100%;
-    max-width: 200px;
+    max-width: 175px;
     text-align: center;
     background-color: $accent;
     color: $light;
@@ -92,7 +92,7 @@ i {
     text-transform: capitalize;
     margin-bottom: 3rem;
     text-align: center;   
-    @include lg {
+    @include xl {
         margin-bottom: 5rem;
     }
 }
