@@ -9,17 +9,10 @@
 }
 
 html {
-  font-size: 0.8rem;
-}
-
-@media (min-width: 600px) {
-  html {
-    font-size: 1rem;
-  }
+  scroll-behavior: smooth;
 }
 
 body {
-  background-color: #181818;
   color: #fff;
   overflow-x: hidden;
   line-height: 1.5;
@@ -46,6 +39,7 @@ h1, h2, h3, p {
 
 h1 {
   font-size: 2rem;
+  text-transform: capitalize;
 }
 
 h2 {
@@ -87,12 +81,6 @@ i {
   text-align: center;
 }
 
-@media (min-width: 1200px) {
-  .heading {
-    margin-bottom: 5rem;
-  }
-}
-
 .social {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -121,6 +109,7 @@ i {
 }
 
 .parallax {
+  background-color: #191919;
   color: #fff;
 }
 
@@ -139,8 +128,8 @@ i {
 }
 
 .landing-page {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../images/landing-image.jpg");
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/landing-image.jpg");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(25, 25, 25, 0.25)), color-stop(rgba(25, 25, 25, 0.5)), to(#191919)), url("../images/landing-image.jpeg");
+  background-image: linear-gradient(rgba(25, 25, 25, 0.25), rgba(25, 25, 25, 0.5), #191919), url("../images/landing-image.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -293,7 +282,7 @@ i {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: #181818;
+  background-color: #191919;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
@@ -496,12 +485,8 @@ i {
   }
 }
 
-.services {
-  background-color: #181818;
-}
-
 .services__container {
-  padding: 5rem 1rem;
+  padding: 5rem 1rem 0;
   max-width: 600px;
   width: 100%;
   margin: 0 auto;
@@ -509,7 +494,7 @@ i {
 
 @media (min-width: 1200px) {
   .services__container {
-    padding: 10rem 1rem;
+    padding: 10rem 1rem 0;
     max-width: 1200px;
     width: 100%;
     margin: 0 auto;
@@ -534,7 +519,7 @@ i {
 }
 
 .services__item {
-  background-color: #1d1d1d;
+  background-color: #1e1e1e;
   padding: 2rem 1rem;
 }
 
@@ -554,12 +539,8 @@ i {
   font-size: 3rem;
 }
 
-.gallery {
-  background-color: #1d1d1d;
-}
-
 .gallery__container {
-  padding: 5rem 1rem;
+  padding: 5rem 1rem 0;
   max-width: 600px;
   width: 100%;
   margin: 0 auto;
@@ -567,7 +548,7 @@ i {
 
 @media (min-width: 1200px) {
   .gallery__container {
-    padding: 10rem 1rem;
+    padding: 10rem 1rem 0;
     max-width: 1200px;
     width: 100%;
     margin: 0 auto;
@@ -675,10 +656,6 @@ i {
   opacity: 0.5;
 }
 
-.about {
-  background-color: #181818;
-}
-
 .about__container {
   display: -ms-grid;
   display: grid;
@@ -718,9 +695,9 @@ i {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -733,7 +710,6 @@ i {
 
 @media (min-width: 1200px) {
   .about__text {
-    padding-top: 4rem;
     -ms-grid-column: 2;
     -ms-grid-column-span: 1;
     grid-column: 2 /3;
@@ -747,22 +723,13 @@ i {
   }
 }
 
-.about__text .heading {
-  margin-bottom: 2rem;
-}
-
 .about__image {
   text-align: center;
 }
 
 .about__image img {
-  width: 60%;
-}
-
-@media (min-width: 1200px) {
-  .about__image img {
-    width: 100%;
-  }
+  width: 100%;
+  max-width: 350px;
 }
 
 .contact {
@@ -820,7 +787,7 @@ i {
 }
 
 .contact .contact-form {
-  background-color: rgba(24, 24, 24, 0.8);
+  background-color: rgba(25, 25, 25, 0.8);
   padding: 2rem;
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -881,8 +848,8 @@ i {
   top: -10;
   color: #FF7A00;
   font-size: 0.9rem;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(25%, rgba(0, 0, 0, 0.05)), color-stop(50%, black), color-stop(25%, rgba(0, 0, 0, 0.05)));
-  background: linear-gradient(rgba(0, 0, 0, 0.05) 25%, black 50%, rgba(0, 0, 0, 0.05) 25%);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.1)), color-stop(black), to(rgba(0, 0, 0, 0.1)));
+  background: linear-gradient(rgba(0, 0, 0, 0.1), black, rgba(0, 0, 0, 0.1));
 }
 
 .contact .contact-form textarea {
@@ -913,10 +880,6 @@ i {
         -ms-flex-pack: center;
             justify-content: center;
   }
-}
-
-.contact__info h1 {
-  margin-bottom: 2rem;
 }
 
 .contact__info p {

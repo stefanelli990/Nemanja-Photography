@@ -6,8 +6,9 @@
 
 
 .parallax {
+    
+    background-color: $dark;
     color: $light;
-   
     @include xl {
       position: relative;
       z-index: 2;
@@ -22,7 +23,7 @@
 
 //bg image 
 .landing-page {
-    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../images/landing-image.jpg');
+    background-image: linear-gradient(rgba($dark,0.25), rgba($dark,0.5),  $dark ), url('../images/landing-image.jpeg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position:  center;
@@ -294,13 +295,13 @@
 
 //services 
 .services {
-   background-color: $dark;
+   
    
     &__container {
         
-        @include container(5rem 1rem, 600px);
+        @include container(5rem 1rem 0, 600px);
         @include xl {
-            @include container(10rem 1rem, 1200px);
+            @include container(10rem 1rem 0, 1200px);
         }
     }
 
@@ -336,12 +337,12 @@
 
 //gallery
 .gallery {
-    background-color: lighten($dark, 2);
+   
     &__container {
         
-        @include container(5rem 1rem, 600px);
+        @include container(5rem 1rem 0, 600px);
         @include xl {
-            @include container(10rem 1rem, 1200px);
+            @include container(10rem 1rem 0, 1200px);
         }
     }
 
@@ -417,7 +418,7 @@
 
 //about 
 .about {
-    background-color: $dark;
+   
     &__container {
         display: grid;
         grid-template-columns: 1fr;
@@ -436,29 +437,25 @@
         grid-column: 1/2;
         grid-row: 1/2;
         display: flex;
-        justify-content: flex-start;
+        justify-content: center;
         align-items: center;
         flex-direction: column;
         text-align: center;
         @include xl {
-            padding-top: 4rem;
             grid-column: 2 /3;
             grid-row: 1/2;
             align-items: flex-start;
             text-align: left;
         }
-        .heading {
-            margin-bottom: 2rem;
-        }
+      
     }
 
     &__image {
         text-align: center;
         img {
-            width: 60%;
-            @include xl {
-                width: 100%;
-            }
+            width: 100%;
+            max-width: 350px;
+          
         }
     }
 }
@@ -550,7 +547,7 @@
             top: -10;
             color: $accent;
             font-size: 0.9rem;
-            background: linear-gradient(rgba(0, 0, 0, 0.05)25%, rgba(0,0,0,1)50%, rgba(0, 0, 0, 0.05)25%);
+            background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0,0,0,1), rgba(0, 0, 0, 0.1));
           }
         }
         textarea {
@@ -576,9 +573,7 @@
         }
         
        
-        h1 {
-            margin-bottom: 2rem;
-        }
+       
 
         p {
             margin-bottom: 3rem;
@@ -617,6 +612,7 @@
 
     .contact-bottom__container {
         @include container(2rem 1rem, 600px);
+        
         @include xl {
             @include container(2rem 1rem, 1200px);
         }
