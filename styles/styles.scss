@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap');
+
 @import 'media-query';
 @import 'config';
 
@@ -7,8 +7,8 @@
 
 .parallax {
     
-    background-color: $dark;
-    color: $light;
+    background-color: $light;
+    color: $dark;
     @include xl {
       position: relative;
       z-index: 2;
@@ -19,17 +19,20 @@
       bottom: 0;
       visibility: hidden;
     }
+
+    
   }
 
 //bg image 
 .landing-page {
-    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0, 0.6)), url('../images/landing-image.jpeg');
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0, 0.5)), url('../images/landing-image.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position:  center;
     position: relative;
     right: 0;
     transition: $transition;
+    background-attachment: fixed;
 
 } 
 
@@ -218,13 +221,19 @@
       
         @include xl {
             @include container(0rem 1rem, 1200px);
-          
+        }
+        @include mediaQuery(2000px) {
+            min-height: 1500px;
+            
         }
     }
 
     &__text {
-      
+      color: $light;
       width: 85%;
+      p {
+          color: $light;
+      }
     @include sm {
         width: 70%;
     }
@@ -307,20 +316,14 @@
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         gap: 1rem;
-       
+        
         @include xl {
             gap: 2rem;   
             grid-template-columns: repeat(3, 1fr);
         }
     }
 
-    &__item {
-        background-color: lighten($dark, 4);
-        padding: 2rem 1rem;
-        @include xl {
-            padding: 2rem;
-        }
-    }
+    
     
     h2 {
         text-transform: capitalize;
@@ -356,6 +359,14 @@
             grid-template-columns: repeat(3,1fr);
            
         }
+
+        .glightbox {
+            background-color: $dark;
+
+            
+        }
+
+       
 
         #img1 {
             @include xl {
@@ -452,6 +463,9 @@
         img {
             width: 100%;
             max-width: 350px;
+            @include xl {
+                max-width: unset;
+            }
           
         }
     }
@@ -468,7 +482,7 @@
         width: 100%;
         height: 830px;
       } 
-    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../images/canon.jpg');
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../images/canon.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position:  center;
@@ -495,7 +509,7 @@
     
 
     .contact-form {
-        background-color: rgba($dark, 0.9);
+        background-color: rgba($dark, 0.5);
         padding: 2rem 1rem;
         flex: 1;
         text-align: center;
@@ -574,7 +588,7 @@
 
         p {
             margin-bottom: 3rem;
-         
+            color: $light;
             @include xl {
                 text-align: left;
             }
