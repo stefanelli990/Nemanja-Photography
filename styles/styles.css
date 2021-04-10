@@ -109,7 +109,7 @@ i {
 }
 
 .parallax {
-  background-color: #191919;
+  background-color: #0f0f0f;
   color: #fff;
 }
 
@@ -128,8 +128,8 @@ i {
 }
 
 .landing-page {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(25, 25, 25, 0.25)), color-stop(rgba(25, 25, 25, 0.5)), to(#191919)), url("../images/landing-image.jpeg");
-  background-image: linear-gradient(rgba(25, 25, 25, 0.25), rgba(25, 25, 25, 0.5), #191919), url("../images/landing-image.jpeg");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url("../images/landing-image.jpeg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/landing-image.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -282,7 +282,7 @@ i {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: #191919;
+  background-color: #0f0f0f;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
@@ -377,15 +377,13 @@ i {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  color: #fff;
-  text-align: center;
 }
 
 @media (min-width: 1200px) {
@@ -394,17 +392,16 @@ i {
     max-width: 1200px;
     width: 100%;
     margin: 0 auto;
-    text-align: left;
   }
 }
 
 .showcase__text {
-  padding-right: 0;
+  width: 85%;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 600px) {
   .showcase__text {
-    padding-right: 40%;
+    width: 70%;
   }
 }
 
@@ -470,13 +467,6 @@ i {
 
 .showcase h1 {
   line-height: 1.3;
-  font-size: 2rem;
-}
-
-@media (min-width: 600px) {
-  .showcase h1 {
-    font-size: 3rem;
-  }
 }
 
 @media (min-width: 1200px) {
@@ -519,7 +509,7 @@ i {
 }
 
 .services__item {
-  background-color: #1e1e1e;
+  background-color: #191919;
   padding: 2rem 1rem;
 }
 
@@ -787,8 +777,8 @@ i {
 }
 
 .contact .contact-form {
-  background-color: rgba(25, 25, 25, 0.8);
-  padding: 2rem;
+  background-color: rgba(15, 15, 15, 0.9);
+  padding: 2rem 1rem;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -884,7 +874,6 @@ i {
 
 .contact__info p {
   margin-bottom: 3rem;
-  text-align: center;
 }
 
 @media (min-width: 1200px) {
