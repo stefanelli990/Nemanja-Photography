@@ -487,7 +487,7 @@
     
 
     .contact-form {
-        background-color: rgba($dark, 0.5);
+        background-color: rgba($dark, 0.8);
         padding: 2rem 1rem;
         flex: 1;
         text-align: center;
@@ -504,7 +504,10 @@
         }
         label {
           position: absolute;
-          top: 14;
+          top: 12;
+          @include sm {
+            top: 15;
+          }
           left: 1rem;
           color: light;
           transition: all 0.2s ease;
@@ -533,10 +536,13 @@
           }
           &:focus ~ label,
           &:valid ~ label {
-            top: -10;
+            top: -8;
+            @include sm {
+                top: -10;
+            }
             color: $accent;
             font-size: 0.9rem;
-            background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0,0,0,1), rgba(0, 0, 0, 0.1));
+            background: linear-gradient(rgba($dark, 0.1), rgba($dark,1), rgba($dark,1), rgba($dark, 0.1));
           }
         }
         textarea {

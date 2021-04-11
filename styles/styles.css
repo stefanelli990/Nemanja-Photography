@@ -769,7 +769,7 @@ i {
 }
 
 .contact .contact-form {
-  background-color: rgba(29, 29, 29, 0.5);
+  background-color: rgba(29, 29, 29, 0.8);
   padding: 2rem 1rem;
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -791,12 +791,18 @@ i {
 
 .contact .contact-form label {
   position: absolute;
-  top: 14;
+  top: 12;
   left: 1rem;
   color: light;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
   cursor: pointer;
+}
+
+@media (min-width: 600px) {
+  .contact .contact-form label {
+    top: 15;
+  }
 }
 
 .contact .contact-form input, .contact .contact-form textarea {
@@ -827,11 +833,19 @@ i {
 .contact .contact-form input:focus ~ label,
 .contact .contact-form input:valid ~ label, .contact .contact-form textarea:focus ~ label,
 .contact .contact-form textarea:valid ~ label {
-  top: -10;
+  top: -8;
   color: #FF7A00;
   font-size: 0.9rem;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.1)), color-stop(black), to(rgba(0, 0, 0, 0.1)));
-  background: linear-gradient(rgba(0, 0, 0, 0.1), black, rgba(0, 0, 0, 0.1));
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(29, 29, 29, 0.1)), color-stop(#1d1d1d), color-stop(#1d1d1d), to(rgba(29, 29, 29, 0.1)));
+  background: linear-gradient(rgba(29, 29, 29, 0.1), #1d1d1d, #1d1d1d, rgba(29, 29, 29, 0.1));
+}
+
+@media (min-width: 600px) {
+  .contact .contact-form input:focus ~ label,
+  .contact .contact-form input:valid ~ label, .contact .contact-form textarea:focus ~ label,
+  .contact .contact-form textarea:valid ~ label {
+    top: -10;
+  }
 }
 
 .contact .contact-form textarea {
