@@ -15,8 +15,6 @@
     position: relative;
     right: 0;
     transition: $transition;
-    background-attachment: fixed;
-
 } 
 
 .landing-page-active {
@@ -313,7 +311,7 @@
     }
     i {
         color: $accent;
-        margin-bottom: 0.5rem;
+        
         font-size: 3rem;
     }
 }
@@ -460,12 +458,12 @@
 //contact
 .contact {
   
-    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../images/canon.jpg');
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../images/canon.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position:  center;
     &__container {
-        
+        color: $light;
         @include container(5rem 1rem, 600px);
         @include xl {
             @include container(10rem 1rem, 1200px);
@@ -473,16 +471,18 @@
     }
 
     &__flex-container {
-        gap: 3rem;
+        gap: 2rem;
         display: flex;
         flex-direction: column;
        
        
         @include xl {
             flex-direction: row;
-            gap: 2rem;
+         
         }
     }
+
+    
 
     
 
@@ -547,12 +547,10 @@
       }
 
     &__info {
-
-       
         flex: 1;
         display: flex;
         flex-direction: column;
-       
+        text-align: center;
        
         @include xl {
             text-align: left;
@@ -561,24 +559,20 @@
             
         }
         
-       
-       
-
         p {
-            margin-bottom: 3rem;
             color: $light;
-            @include xl {
-                text-align: left;
-            }
+            margin-bottom: 2.5rem;
         }
 
         i {
             margin-right: 2rem;
+            margin-bottom: 0;
         }
       
             
         li {
-            margin-bottom: 2rem;
+            text-align: left;
+            margin-bottom: 1.5rem;
         }
         
         .social {
@@ -591,13 +585,7 @@
                 
             }
         }
-
-      
-
-      
     } 
-
-   
 
     .contact-bottom__container {
         @include container(2rem 1rem, 600px);
@@ -606,7 +594,7 @@
             @include container(2rem 1rem, 1200px);
         }
         border-top: 1px solid #353535;
-       
+        color: $light;
         text-align: center;
     }
 }

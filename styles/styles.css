@@ -8,12 +8,18 @@
 }
 
 html {
-  scroll-behavior: smooth;
+  font-size: 0.8rem;
+}
+
+@media (min-width: 600px) {
+  html {
+    font-size: 1rem;
+  }
 }
 
 body {
   background-color: #fff;
-  color: #fff;
+  color: #1d1d1d;
   overflow-x: hidden;
   line-height: 1.5;
 }
@@ -33,7 +39,7 @@ a:hover {
   color: #FF7A00;
 }
 
-h1, h2, h3, p {
+h1, h2, h3, p, i {
   margin-bottom: 1rem;
 }
 
@@ -52,7 +58,7 @@ h3 {
 }
 
 p {
-  color: #777777;
+  color: #919191;
 }
 
 i {
@@ -123,7 +129,6 @@ i {
   right: 0;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
-  background-attachment: fixed;
 }
 
 .landing-page-active {
@@ -512,7 +517,6 @@ i {
 
 .services i {
   color: #FF7A00;
-  margin-bottom: 0.5rem;
   font-size: 3rem;
 }
 
@@ -720,14 +724,15 @@ i {
 }
 
 .contact {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../images/canon.jpg");
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/canon.jpg");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url("../images/canon.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/canon.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .contact__container {
+  color: #fff;
   padding: 5rem 1rem;
   max-width: 600px;
   width: 100%;
@@ -744,7 +749,7 @@ i {
 }
 
 .contact__flex-container {
-  gap: 3rem;
+  gap: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -760,7 +765,6 @@ i {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    gap: 2rem;
   }
 }
 
@@ -846,6 +850,7 @@ i {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  text-align: center;
 }
 
 @media (min-width: 1200px) {
@@ -861,22 +866,18 @@ i {
 }
 
 .contact__info p {
-  margin-bottom: 3rem;
   color: #fff;
-}
-
-@media (min-width: 1200px) {
-  .contact__info p {
-    text-align: left;
-  }
+  margin-bottom: 2.5rem;
 }
 
 .contact__info i {
   margin-right: 2rem;
+  margin-bottom: 0;
 }
 
 .contact__info li {
-  margin-bottom: 2rem;
+  text-align: left;
+  margin-bottom: 1.5rem;
 }
 
 .contact__info .social i {
@@ -893,6 +894,7 @@ i {
   width: 100%;
   margin: 0 auto;
   border-top: 1px solid #353535;
+  color: #fff;
   text-align: center;
 }
 
