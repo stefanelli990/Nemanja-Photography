@@ -138,7 +138,7 @@
             <img src="images/about-img.jpg" alt="">
         </div>
         <div class="about__text">
-            <h1>let's introduce myself</h1>
+            <h1 class="heading">let's introduce myself</h1>
                 <p>Hey, my name is Nemanja Mohenski. I am a professional photographer with five years of experience.</p> 
                 <p>Being passionate about my work very much, i like to give people memories captured in their photos. You will have photos of important moments of life among important people, or ordinary portraits in the office style, thematic portraits, and many others.</p>
                 <p>The photo session can take place both indoors and outdoors. I will be happy to work with your!</p>
@@ -151,39 +151,46 @@
 <!-- contact -->
 <footer class="contact" id="contact">
     <div class="contact__container">
-        
+        <h1 class="heading">get in touch</h1>
         <div class="contact__flex-container">
-            
+            <form class="contact-form" name="contact-form" method="POST" data-netlify="true">
+                <div class="input-field">
+                  <input name="name" type="text" id="name" required autocomplete="off"/>
+                  <label for="name">Your Name</label>
+                </div>
+                <div class="input-field">
+                  <input name="email" type="text" id="email" required autocomplete="off"/>
+                  <label for="email">Your Email</label>
+                </div>
+                <div class="input-field">
+                  <textarea name="textarea" id="textarea" required autocomplete="off"></textarea>
+                  <label for="textarea">Write Message</label>
+                </div>
+                <button class="btn" type="submit">Send Message</button>
+              </form>
         <div class="contact__info">
-        <h1>get in touch</h1>
-        <p>If you're interested in doing some quality photos, please contact me. I'm available for you.</p>
-        <div class="contact__details"> 
+        <h2>contact info:</h2>
+        
+    
         <ul>
-                <li><a href="mailto:nemanja.mohenski@gmail.com"><i class="fas fa-envelope"></i>nemanja.mohenski@gmail.com</a></li>
-                <li><a href="tel:+381691019376"><i class="fas fa-phone-alt"></i>+381 (0)69 101 93 76</a></li>
+                <li><h3>Email</h3></li>
+                <li><a href="mailto:nemanja.mohenski@gmail.com">nemanja.mohenski@gmail.com</a></li>
+            </ul>
+            <ul>
+                <li><h3>Phone</h3></li>
+                <li><a href="tel:+381691019376">+381 (0)69 101 93 76</a></li>
             </ul>
             <ul class="social">
+                <li><h3>Social Networks</h3></li>
+                <ul>
                     <li><a href="https://www.instagram.com/nemanjaphotography_/" class="social-link"><i class="fab fa-instagram"></i></a></li>
                     <li><a href="https://www.facebook.com/NM-Photography-102095008194968" class="social-link"><i class="fab fa-facebook-f"></i></a></li>
                     <li><a href="https://www.linkedin.com/in/nemanja-mohenski-0944bb1b5/" class="social-link"><i class="fab fa-linkedin-in"></i></a></li>
-            </ul>
+                </ul>
+                </ul>
         </div>
-    </div>   
-        <form class="contact-form" name="contact-form" method="POST" data-netlify="true">
-            <div class="input-field">
-              <input name="name" type="text" id="name" required autocomplete="off"/>
-              <label for="name">Your Name</label>
-            </div>
-            <div class="input-field">
-              <input name="email" type="text" id="email" required autocomplete="off"/>
-              <label for="email">Your Email</label>
-            </div>
-            <div class="input-field">
-              <textarea name="textarea" id="textarea" required autocomplete="off"></textarea>
-              <label for="textarea">Write Message</label>
-            </div>
-            <button class="btn" type="submit">Send Message</button>
-          </form>
+  
+        
         
     </div>
     </div>

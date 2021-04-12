@@ -195,13 +195,15 @@
         min-height: 100vh;
         display: flex;
         justify-content: center;
-        align-items: flex-start;
+        align-items: center;
         flex-direction: column;
-        
+        text-align: center;
         
       
         @include xl {
             @include container(0rem 1rem, 1200px);
+            text-align: left;
+            align-items: flex-start;
         }
         @include mediaQuery(2000px) {
             min-height: 1500px;
@@ -212,6 +214,16 @@
     &__text {
       color: $light;
       width: 85%;
+      
+      h1 {
+        line-height: 1.3;
+     
+     
+        @include xl {
+            font-size: 4rem;
+        }
+    }
+      
       p {
           color: $light;
       }
@@ -255,27 +267,8 @@
     }
     }
 
-    &__social-horizontal {
-        position: absolute;
-        bottom: 1rem;
-        left: 50%;
-        transform: translate(-50%);
-        display: flex;
-        @include xl {
-            display: none;
-        }
-        li {
-            margin: 0 1rem;
-        }
-    }
-    h1 {
-        line-height: 1.3;
-     
-     
-        @include xl {
-            font-size: 4rem;
-        }
-    }
+    
+   
   
 }
 
@@ -286,7 +279,7 @@
    
     &__container {
         
-        @include container(5rem 1rem 0, 600px);
+        @include container(10rem 1rem 0, 600px);
         @include xl {
             @include container(10rem 1rem 0, 1200px);
         }
@@ -303,6 +296,13 @@
             grid-template-columns: repeat(3, 1fr);
         }
     }
+
+    &__item {
+        padding: 2rem;
+        background-color: $light;
+    }
+
+   
 
     
     
@@ -321,7 +321,7 @@
    
     &__container {
         
-        @include container(5rem 1rem 0, 600px);
+        @include container(10rem 1rem 0, 600px);
         @include xl {
             @include container(10rem 1rem 0, 1200px);
         }
@@ -416,7 +416,7 @@
             grid-template-columns: 0.7fr 1.3fr;
             gap: 4rem;
         }
-        @include container(5rem 1rem, 600px);
+        @include container(10rem 1rem, 600px);
         @include xl {
             @include container(10rem 1rem, 1200px);
         }
@@ -450,6 +450,15 @@
           
         }
     }
+
+    .heading {
+        &::after {
+            @include xl {
+                transform: translateX(0%);
+                left: 0;
+            }
+        }
+    }
 }
 
 
@@ -458,24 +467,22 @@
 //contact
 .contact {
   
-    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../images/canon.jpg');
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../images/canon.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position:  center;
     &__container {
         color: $light;
-        @include container(5rem 1rem, 600px);
+        @include container(10rem 1rem, 600px);
         @include xl {
             @include container(10rem 1rem, 1200px);
         }
     }
 
     &__flex-container {
-        gap: 2rem;
+        gap: 3rem;
         display: flex;
         flex-direction: column;
-       
-       
         @include xl {
             flex-direction: row;
          
@@ -554,43 +561,29 @@
 
     &__info {
         flex: 1;
-        display: flex;
-        flex-direction: column;
         text-align: center;
-       
         @include xl {
             text-align: left;
-            align-items: flex-start;
-            justify-content: center;
             
-        }
-        
-        p {
-            color: $light;
-            margin-bottom: 2.5rem;
+            
         }
 
-        i {
-            margin-right: 2rem;
-            margin-bottom: 0;
-        }
-      
-            
-        li {
-            text-align: left;
-            margin-bottom: 1.5rem;
+        .heading {
+            &::after {
+                @include xl {
+                    transform: translateX(0%);
+                    left: 0;
+                }
+            }
         }
         
-        .social {
-         
-            i {
-                margin-right: 0;
-            }
-            li {
-                margin: 0 2rem 0 0;
-                
-            }
-        }
+       
+
+        
+      
+       
+        
+      
     } 
 
     .contact-bottom__container {
