@@ -7,18 +7,8 @@
   letter-spacing: 1px;
 }
 
-html {
-  font-size: 0.8rem;
-}
-
-@media (min-width: 600px) {
-  html {
-    font-size: 1rem;
-  }
-}
-
 body {
-  background-color: whitesmoke;
+  background-color: #fafafa;
   color: #1d1d1d;
   overflow-x: hidden;
   line-height: 1.5;
@@ -39,7 +29,7 @@ a:hover {
   color: #FF7A00;
 }
 
-h1, h2, h3, p, i {
+h1, h2, h3, p {
   margin-bottom: 1.5rem;
 }
 
@@ -89,27 +79,7 @@ i {
 .heading {
   text-transform: capitalize;
   margin-bottom: 3rem;
-  padding-bottom: 1rem;
   text-align: center;
-  position: relative;
-}
-
-.heading::after {
-  content: ' ';
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  width: 75px;
-  height: 4px;
-  background-color: #FF7A00;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-}
-
-.social {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
 }
 
 .bar1,
@@ -134,11 +104,6 @@ i {
 }
 
 .landing-page {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../images/landing-image.jpg");
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/landing-image.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
   position: relative;
   right: 0;
   -webkit-transition: all 0.3s ease;
@@ -163,10 +128,6 @@ i {
   .body-scroll {
     overflow-y: visible;
   }
-}
-
-.disable-scroll-images {
-  overflow-y: hidden;
 }
 
 .navigation {
@@ -299,23 +260,8 @@ i {
   }
 }
 
-.navigation .hamburger ul {
-  width: 100%;
-  padding: 1.5rem 1rem;
-  text-align: center;
-}
-
 .navigation .hamburger li {
   margin: 0 1rem;
-}
-
-.navigation .hamburger a {
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-
-.navigation .hamburger a:hover {
-  color: #FF7A00;
 }
 
 .navigation .hamburger__navlinks li {
@@ -329,9 +275,8 @@ i {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  padding: 1rem 0;
+  width: 100%;
 }
 
 .navigation .hamburger__social {
@@ -348,6 +293,38 @@ i {
 
 .navigation .hamburger-active {
   right: 0;
+}
+
+.navigation-animation {
+  position: absolute;
+  background-color: #1d1d1d;
+  -webkit-box-shadow: 0 3px 2px -2px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 3px 2px -2px rgba(0, 0, 0, 0.2);
+  -webkit-animation: nav-animation 0.5s;
+          animation: nav-animation 0.5s;
+  position: fixed;
+}
+
+@-webkit-keyframes nav-animation {
+  0% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+
+@keyframes nav-animation {
+  0% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
 }
 
 .toggle-rotate {
@@ -368,6 +345,14 @@ i {
   width: 30px;
   -webkit-transform: rotate(45deg) translate(-6px, -5px);
           transform: rotate(45deg) translate(-6px, -5px);
+}
+
+.showcase {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../images/landing-image.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/landing-image.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .showcase__container {
@@ -414,7 +399,6 @@ i {
 
 .showcase__text {
   color: #fff;
-  width: 85%;
 }
 
 .showcase__text h1 {
@@ -520,6 +504,7 @@ i {
 
 .services i {
   color: #FF7A00;
+  margin-bottom: 1rem;
   font-size: 3rem;
 }
 
@@ -726,14 +711,6 @@ i {
   }
 }
 
-@media (min-width: 1200px) {
-  .about .heading::after {
-    -webkit-transform: translateX(0%);
-            transform: translateX(0%);
-    left: 0;
-  }
-}
-
 .contact {
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url("../images/canon.jpg");
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../images/canon.jpg");
@@ -760,7 +737,6 @@ i {
 }
 
 .contact__flex-container {
-  gap: 3rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -768,6 +744,7 @@ i {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  gap: 4rem;
 }
 
 @media (min-width: 1200px) {
@@ -782,15 +759,15 @@ i {
 .contact .contact-form {
   background-color: rgba(29, 29, 29, 0.8);
   padding: 2rem 1rem;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
   text-align: center;
 }
 
 @media (min-width: 1200px) {
   .contact .contact-form {
-    text-align: right;
+    text-align: left;
     padding: 2rem;
   }
 }
@@ -802,18 +779,12 @@ i {
 
 .contact .contact-form label {
   position: absolute;
-  top: 12;
+  top: 15;
   left: 1rem;
   color: light;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
   cursor: pointer;
-}
-
-@media (min-width: 600px) {
-  .contact .contact-form label {
-    top: 15;
-  }
 }
 
 .contact .contact-form input, .contact .contact-form textarea {
@@ -844,19 +815,11 @@ i {
 .contact .contact-form input:focus ~ label,
 .contact .contact-form input:valid ~ label, .contact .contact-form textarea:focus ~ label,
 .contact .contact-form textarea:valid ~ label {
-  top: -8;
+  top: -10;
   color: #FF7A00;
   font-size: 0.9rem;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(29, 29, 29, 0.1)), color-stop(#1d1d1d), color-stop(#1d1d1d), to(rgba(29, 29, 29, 0.1)));
   background: linear-gradient(rgba(29, 29, 29, 0.1), #1d1d1d, #1d1d1d, rgba(29, 29, 29, 0.1));
-}
-
-@media (min-width: 600px) {
-  .contact .contact-form input:focus ~ label,
-  .contact .contact-form input:valid ~ label, .contact .contact-form textarea:focus ~ label,
-  .contact .contact-form textarea:valid ~ label {
-    top: -10;
-  }
 }
 
 .contact .contact-form textarea {
@@ -868,6 +831,16 @@ i {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   text-align: center;
 }
 
@@ -877,11 +850,43 @@ i {
   }
 }
 
+.contact__info ul {
+  margin-bottom: 2rem;
+}
+
+.contact__info ul:nth-child(3) {
+  margin-bottom: 0;
+}
+
+.contact__info h3 {
+  margin-bottom: 1rem;
+}
+
+.contact__info .social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 0;
+}
+
 @media (min-width: 1200px) {
-  .contact__info .heading::after {
-    -webkit-transform: translateX(0%);
-            transform: translateX(0%);
-    left: 0;
+  .contact__info .social {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+
+.contact__info .social-link {
+  margin: 0 1rem;
+}
+
+@media (min-width: 1200px) {
+  .contact__info .social-link {
+    margin: 0 2rem 0 0;
   }
 }
 

@@ -3,6 +3,7 @@ const hamburgerMenu = document.querySelector('.hamburger');
 const body = document.querySelector('body');
 const landingPage = document.querySelector('.landing-page');
 const navLinks = document.querySelectorAll('.nav-link');
+const navigation = document.querySelector('.navigation');
 
 
 //hamburger menu slide
@@ -11,6 +12,7 @@ toggle.addEventListener('click', () => {
     toggle.classList.toggle('change');
     landingPage.classList.toggle('landing-page-active');
     hamburgerMenu.classList.toggle('hamburger-active');
+    
 });
 
 //close hamburger when clicks on hamburger navlinks
@@ -33,7 +35,15 @@ window.addEventListener('scroll', () => {
     } 
 });
 
+// navigation animation 
+window.addEventListener('scroll', () => {
+    if(window.pageYOffset > 100) {
+        navigation.classList.add('navigation-animation');
 
+    } else {
+        navigation.classList.remove('navigation-animation');
+    }
+});
 
 //glightbox
 const lightbox = GLightbox({

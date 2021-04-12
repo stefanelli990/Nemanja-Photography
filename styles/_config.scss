@@ -18,14 +18,11 @@ $transition: all 0.3s ease;
 
 html {
     // scroll-behavior: smooth;
-   font-size: 0.8rem;
-   @include sm {
-       font-size: 1rem;
-   }
+  
 }
 
 body {
-    background-color: darken($light,4);
+    background-color: darken($light,2);
     color: $dark;
     overflow-x: hidden;
     line-height: 1.5;
@@ -45,7 +42,7 @@ a {
             }
 }
 
-h1,h2,h3, p, i {
+h1,h2,h3, p {
     margin-bottom: 1.5rem;
 }
 
@@ -98,26 +95,10 @@ i {
 .heading {
     text-transform: capitalize;
     margin-bottom: 3rem;
-    padding-bottom: 1rem;
     text-align: center;  
-    position: relative;
-   
-    &::after {
-        content:' ';
-        position: absolute;
-        top:100%;
-        left:50%;
-        width: 75px;
-        height: 4px;
-        background-color: $accent;
-        transform:translateX(-50%);
-    }
-   
 }
 
-.social {
-    display: flex;
-}
+
 
 //extends
 %hamburger-bars {
@@ -155,10 +136,3 @@ i {
     margin: 0 auto;
 }
 
-@function set-text-color($background-color) {
-    @if(lightness($background-color) > 70) {
-        @return $dark;
-    } @else {
-        @return $light;
-    }
-}
