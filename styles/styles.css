@@ -107,14 +107,6 @@ i {
   color: #FF7A00;
 }
 
-.bg-image {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../images/landing-image.jpg");
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/landing-image.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
 .body-scroll {
   overflow-y: hidden;
 }
@@ -347,6 +339,20 @@ i {
 .navigation-animation .bar2,
 .navigation-animation .bar3 {
   background-color: #1d1d1d;
+}
+
+.showcase {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../images/landing-image.jpeg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/landing-image.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@media (min-width: 1200px) {
+  .showcase {
+    background-attachment: fixed;
+  }
 }
 
 .showcase__container {
@@ -724,7 +730,7 @@ i {
 @media (min-width: 1200px) {
   .contact__container {
     padding: 10rem 1rem;
-    max-width: 960px;
+    max-width: 1200px;
     width: 100%;
     margin: 0 auto;
   }
@@ -763,9 +769,6 @@ i {
   .contact .contact-form {
     text-align: left;
     padding: 2rem;
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
   }
 }
 
@@ -844,9 +847,6 @@ i {
 @media (min-width: 1200px) {
   .contact__info {
     text-align: left;
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
   }
 }
 
@@ -907,7 +907,7 @@ i {
 @media (min-width: 1200px) {
   .contact .contact-bottom__container {
     padding: 2rem 1rem;
-    max-width: 960px;
+    max-width: 1200px;
     width: 100%;
     margin: 0 auto;
   }

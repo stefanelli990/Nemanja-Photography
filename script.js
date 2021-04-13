@@ -2,7 +2,6 @@ const toggle = document.querySelector('.navigation__toggle');
 const close = document.querySelector('.hamburger__close');
 const hamburgerMenu = document.querySelector('.hamburger');
 const body = document.querySelector('body');
-const landingPage = document.querySelector('.landing-page');
 const navLinks = document.querySelectorAll('.nav-link');
 const navigation = document.querySelector('.navigation');
 const logo = document.querySelector('.navigation__logo');
@@ -24,10 +23,10 @@ close.addEventListener('click', () => {
 navLinks.forEach(navLink => {
     navLink.addEventListener('click', () => {
         body.classList.remove('body-scroll');
-      
         hamburgerMenu.classList.remove('hamburger-active');
     });
 });
+
 
 //prevent hamburger active when scrolls down at bigger window
 // window.addEventListener('scroll', () => {
@@ -39,13 +38,12 @@ navLinks.forEach(navLink => {
 //     } 
 // });
 
+
 // navigation animation 
 window.addEventListener('scroll', () => {
     if(window.pageYOffset > 500) {
         navigation.classList.add('navigation-animation');
         logo.firstElementChild.setAttribute('src', 'images/logo-black.svg');
-        
-
     } else {
         navigation.classList.remove('navigation-animation');
         logo.firstElementChild.setAttribute('src', 'images/logo-white.svg');
