@@ -128,10 +128,10 @@
      
  }
  &__social {
-    border-top: 1px solid  rgba($light, 0.1);
+    border-top: 1px solid  #353535;
  }
  &__languages {
-    border-bottom: 1px solid  rgba($light, 0.1);
+    border-bottom: 1px solid  #353535;
  }
  .en {
     color: $accent;
@@ -184,7 +184,7 @@
 
 //showcase 
 .showcase {
-    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0, 0.5)), url('../images/landing-image.jpeg');
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0, 0.4)), url('../images/landing-image.jpeg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position:  center;
