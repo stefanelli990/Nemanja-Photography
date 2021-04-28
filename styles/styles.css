@@ -349,12 +349,6 @@ i {
   background-position: center;
 }
 
-@media (min-width: 1200px) {
-  .showcase {
-    background-attachment: fixed;
-  }
-}
-
 .showcase__container {
   padding: 0rem 1rem;
   max-width: 600px;

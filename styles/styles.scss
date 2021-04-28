@@ -188,9 +188,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position:  center;
-    @include xl {
-        background-attachment: fixed;
-    }
+   
     &__container {
         @include container(0rem 1rem, 600px);
         position: relative;
