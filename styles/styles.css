@@ -342,31 +342,11 @@ i {
 }
 
 .showcase {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url("../images/pexels-gary-barnes-6248852.jpg");
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../images/pexels-gary-barnes-6248852.jpg");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../images/landing-image-min.jpeg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/landing-image-min.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  -webkit-animation: reveal 2s ease forwards;
-          animation: reveal 2s ease forwards;
-}
-
-@-webkit-keyframes reveal {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes reveal {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
 }
 
 .showcase__container {

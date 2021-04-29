@@ -185,19 +185,11 @@
 
 //showcase 
 .showcase {
-    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0, 0.4)), url('../images/pexels-gary-barnes-6248852.jpg');
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0, 0.5)), url('../images/landing-image-min.jpeg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position:  center;
-    animation: reveal 2s ease forwards;
-    @keyframes reveal{ 
-        0% {
-            opacity: 0;
-        }
-        100% {
-            opacity: 1;
-        }
-    }
+   
     &__container {
         @include container(0rem 1rem, 600px);
         position: relative;
