@@ -80,6 +80,11 @@
     }
     &__toggle {
         cursor: pointer;
+        .bar1,
+        .bar2,
+        .bar3 {
+            background-color: $dark;
+        }
        @include xl {
            display: none;
        }
@@ -158,11 +163,8 @@
 
 .navigation-animation {
     position: fixed;
+    animation: nav-animation 0.5s ease forwards;
     background-color: $light;
-    
-    animation: nav-animation 0.5s;
-    
- 
     @keyframes nav-animation {
       0% {
         transform: translateY(-100%);
@@ -171,40 +173,30 @@
         transform: translateY(0%);
       }
     }
-
-    a {
-        color: $dark;
-    }
-
-    .bar1,
-    .bar2,
-    .bar3 {
-      background-color: $dark;
-  }
 }
 
 //showcase 
 .showcase {
-    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0, 0.5)), url('../images/landing-image.jpeg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position:  center;
+    
    
+   background: $light url('../images/wave.svg');
+   background-repeat: no-repeat;
+   background-position: bottom;
+   background-size: cover;
     &__container {
         @include container(0rem 1rem, 600px);
-        position: relative;
-        min-height: 100vh;
+        height: 100vh;
         display: flex;
         justify-content: center;
         align-items: center;
-        flex-direction: column;
         text-align: center;
-        
-      
+        flex-direction: column;
+        gap: 1rem;
         @include xl {
             @include container(0rem 1rem, 1200px);
             text-align: left;
-            align-items: flex-start;
+            flex-direction: row;
+            
         }
         @include mediaQuery(2000px) {
             min-height: 1500px;
@@ -213,7 +205,7 @@
     }
 
     &__text {
-      color: $light;
+     flex: 1.25;
       
       
       h1 {
@@ -221,52 +213,31 @@
      
      
         @include xl {
-            font-size: 4rem;
+            font-size: 3.5rem;
         }
     }
+    
       
-      p {
-          color: $light;
-      }
-    @include sm {
-        width: 70%;
-    }
+   
         
     }
 
-    &__social-vertical {
+    &__image {
+        flex: 1;
         display: none;
         @include xl {
-        display: block;
-        position: absolute;
-        right: 1rem;     
-        top: 50%;
-        transform: translate(-50%, -50%);
-        overflow: hidden;
-        text-align: center;
-        &::before, &::after {
-            background-color: $light;
-            content: "";
-            display: inline-block;
-            height: 10rem;
-            position: relative;
-            vertical-align: middle;
-            width: 50%;
+            display: block;
         }
-        &::before, &::after {
-            width: 1px;
-        }
-        li {
-            margin: 2rem 0;
-        }
-        a {
-            transition: $transition;
-            &:hover {
-                color: $accent;
+        img {
+            width: 100%;
+            max-width: 400px;
+            @include xl {
+                max-width: unset;
             }
         }
     }
-    }
+
+   
 
     
    

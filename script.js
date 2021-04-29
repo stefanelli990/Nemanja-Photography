@@ -43,10 +43,10 @@ navLinks.forEach(navLink => {
 window.addEventListener('scroll', () => {
     if(window.pageYOffset > 500) {
         navigation.classList.add('navigation-animation');
-        logo.firstElementChild.setAttribute('src', 'images/logo-black.svg');
+       
     } else {
         navigation.classList.remove('navigation-animation');
-        logo.firstElementChild.setAttribute('src', 'images/logo-white.svg');
+  
     }
 });
 
