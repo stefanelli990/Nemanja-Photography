@@ -347,6 +347,26 @@ i {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  -webkit-animation: reveal 2s ease forwards;
+          animation: reveal 2s ease forwards;
+}
+
+@-webkit-keyframes reveal {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes reveal {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .showcase__container {
