@@ -342,8 +342,8 @@ i {
 }
 
 .showcase {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url("../images/landing-image.jpeg");
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../images/landing-image.jpeg");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url("../images/pexels-gary-barnes-6248852.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../images/pexels-gary-barnes-6248852.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
