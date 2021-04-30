@@ -10,20 +10,20 @@ const logo = document.querySelector('.navigation__logo');
 //hamburger menu open
 toggle.addEventListener('click', () => {
     body.classList.add('body-scroll');
-    hamburgerMenu.classList.add('hamburger-active');
+    hamburgerMenu.classList.add('active');
 });
 
 //hamburger close
 close.addEventListener('click', () => {
     body.classList.remove('body-scroll');
-    hamburgerMenu.classList.remove('hamburger-active');
+    hamburgerMenu.classList.remove('active');
 })
 
 //close hamburger when clicks on hamburger navlinks
 navLinks.forEach(navLink => {
     navLink.addEventListener('click', () => {
         body.classList.remove('body-scroll');
-        hamburgerMenu.classList.remove('hamburger-active');
+        hamburgerMenu.classList.remove('active');
     });
 });
 
@@ -42,11 +42,9 @@ navLinks.forEach(navLink => {
 // navigation animation 
 window.addEventListener('scroll', () => {
     if(window.pageYOffset > 500) {
-        navigation.classList.add('navigation-animation');
-       
+        navigation.classList.add('animation');
     } else {
-        navigation.classList.remove('navigation-animation');
-  
+        navigation.classList.remove('animation');
     }
 });
 
