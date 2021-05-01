@@ -2,7 +2,7 @@
 $light: #fff;
 $dark: #1d1d1d;
 $grey: #919191;
-$accent: #FF3D3D;
+$accent: #fff;
 $border-radius: 5px;
 $transition: all 0.3s ease;
 
@@ -74,29 +74,39 @@ i {
 
 
 //utilities
-.btn {
+%btn {
     display: inline-block;
     padding: 1rem;
     width: 100%;
     max-width: 175px;
     text-align: center;
-    background-color: $accent;
-    color: $light;
-    border: 1px solid $accent;
+    background-color: $light;
+    color: $dark;
+    border: 1px solid $light;
     transition: $transition;
     border-radius: $border-radius;
     cursor: pointer;
     font-size: 1rem;
-    &:hover {
-        background-color: transparent;
-        color: $accent;
-    }
+    
+}
 
+.btn {
+    @extend %btn;
+}
+
+.btn-ghost {
+    @extend %btn;
+    background-color: transparent;
+    color: $light;
+    &:hover {
+        background-color: $light;
+        color: $dark;
+    }
 }
 
 .heading {
     text-transform: capitalize;
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
     text-align: center;  
 }
 
