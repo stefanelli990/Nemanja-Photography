@@ -58,10 +58,6 @@ h3 {
   font-size: 1.17rem;
 }
 
-p {
-  color: #919191;
-}
-
 i {
   font-size: 1.2rem;
 }
@@ -110,13 +106,28 @@ i {
 }
 
 .nav-link {
+  position: relative;
   color: #fff;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  text-transform: capitalize;
 }
 
-.nav-link:hover {
-  color: #fff;
+.nav-link::after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: -7;
+  content: "";
+  display: block;
+  height: 2px;
+  right: 0;
+  position: absolute;
+  background: #fff;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  width: 0;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+  right: 0;
 }
 
 .body-scroll {
@@ -356,10 +367,6 @@ i {
   .showcase__text h1 {
     font-size: 2.5rem;
   }
-}
-
-.showcase__text p {
-  color: #fff;
 }
 
 .showcase__image {
@@ -700,12 +707,18 @@ i {
 
 .contact .contact-form label {
   position: absolute;
-  top: 15;
+  top: 13;
   left: 1rem;
   color: light;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
   cursor: pointer;
+}
+
+@media (min-width: 600px) {
+  .contact .contact-form label {
+    top: 15;
+  }
 }
 
 .contact .contact-form input, .contact .contact-form textarea {

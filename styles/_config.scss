@@ -64,9 +64,7 @@ h3 {
     font-size: 1.17rem;
 }
 
-p {
-    color: $grey;
-}
+
 
 i {
     font-size: 1.2rem;
@@ -126,12 +124,25 @@ i {
   }
   
   %nav-link {
-   
-      color: $light;
+    position: relative;
+    color: $light;
+    text-transform: capitalize;
+    &::after {
+      background: none repeat scroll 0 0 transparent;
+      bottom: -7;
+      content: "";
+      display: block;
+      height: 2px;
+      right: 0;
+      position: absolute;
+      background: $light;
       transition: $transition;
-      &:hover {
-          color: $accent;
-      }
+      width: 0;
+    }
+    &:hover::after {
+      width: 100%;
+      right: 0;
+    }
   }
 
   .nav-link {
