@@ -164,19 +164,24 @@
    background-color: $dark;
 
     &__container {
-        @include container(10rem 1rem 5rem, 600px);
+        @include container(0 1rem, 600px);
+        min-height: 100vh;
         display: flex;
         justify-content: center;
         align-items: center;
         text-align: center;
-        flex-direction: column;
+        flex-direction: row;
         gap: 2rem;
       
         @include xl {
-            @include container(12rem 1rem 8rem, 960px);
+            @include container(0 1rem, 960px);
             text-align: left;
-            flex-direction: row;
+        
             
+        }
+
+        @include mediaQuery(2000px) {
+            min-height: 1000px;
         }
       
     }
@@ -242,13 +247,7 @@
 }
 
 
-.wave {
-    margin-top: -1px;
-    img {
-        
-        width: 100%;
-    }
-}
+
 
 //services 
 .services {
