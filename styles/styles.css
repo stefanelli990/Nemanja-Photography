@@ -130,16 +130,6 @@ i {
   right: 0;
 }
 
-.body-scroll {
-  overflow-y: hidden;
-}
-
-@media (min-width: 1200px) {
-  .body-scroll {
-    overflow-y: visible;
-  }
-}
-
 .navigation {
   position: absolute;
   top: 0;
@@ -151,6 +141,10 @@ i {
   .navigation {
     -webkit-animation: slide-nav 1s ease forwards;
             animation: slide-nav 1s ease forwards;
+    -webkit-animation-delay: 1s;
+            animation-delay: 1s;
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
   }
   @-webkit-keyframes slide-nav {
     0% {
@@ -392,6 +386,9 @@ i {
   .showcase__text {
     -webkit-animation: slide-text 1s ease forwards;
             animation: slide-text 1s ease forwards;
+    -webkit-animation-delay: .5s;
+            animation-delay: .5s;
+    opacity: 0;
   }
   @-webkit-keyframes slide-text {
     0% {
@@ -442,6 +439,9 @@ i {
     display: block;
     -webkit-animation: slide-image 1s ease forwards;
             animation: slide-image 1s ease forwards;
+    -webkit-animation-delay: .5s;
+            animation-delay: .5s;
+    opacity: 0;
   }
   @-webkit-keyframes slide-image {
     0% {
@@ -478,7 +478,7 @@ i {
 }
 
 .services__container {
-  padding: 5rem 1rem 0;
+  padding: 10rem 1rem 0;
   max-width: 600px;
   width: 100%;
   margin: 0 auto;
@@ -519,7 +519,7 @@ i {
 }
 
 .gallery__container {
-  padding: 5rem 1rem 0;
+  padding: 10rem 1rem 0;
   max-width: 600px;
   width: 100%;
   margin: 0 auto;
@@ -645,7 +645,7 @@ i {
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
   gap: 2rem;
-  padding: 5rem 1rem;
+  padding: 10rem 1rem;
   max-width: 600px;
   width: 100%;
   margin: 0 auto;
@@ -731,7 +731,7 @@ i {
 
 .contact__container {
   color: #fff;
-  padding: 5rem 1rem;
+  padding: 10rem 1rem;
   max-width: 600px;
   width: 100%;
   margin: 0 auto;

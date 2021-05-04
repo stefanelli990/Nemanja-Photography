@@ -3,25 +3,6 @@
 
 
 
-
-
-
-
-
-
-
-
-.body-scroll {
-    overflow-y: hidden;
-    @include xl {
-        overflow-y: visible;
-    }
-}
-
-
-
-
-
 //navigation
 .navigation {
     position: absolute;
@@ -30,7 +11,8 @@
     z-index: 100;
     @include xl {
         animation: slide-nav 1s ease forwards;
-
+        animation-delay: 1s;
+        transform: translateY(-100%);
     @keyframes slide-nav {
         0% {
             transform: translateY(-100%);
@@ -190,7 +172,8 @@
      flex: 1.5;
      @include xl {
         animation: slide-text 1s ease forwards;
-
+        animation-delay: .5s;
+        opacity: 0;
         @keyframes slide-text {
             0% {
                 opacity: 0;
@@ -225,6 +208,8 @@
         @include xl {
             display: block;
             animation: slide-image 1s ease forwards;
+            animation-delay: .5s;
+            opacity: 0;
 
         @keyframes slide-image {
             0% {
@@ -252,7 +237,7 @@
 //services 
 .services {
     &__container {
-        @include container(5rem 1rem 0, 600px);
+        @include container(10rem 1rem 0, 600px);
         @include xl {
             @include container(10rem 1rem 0, 960px);
         }
@@ -291,7 +276,7 @@
    
     &__container {
         
-        @include container(5rem 1rem 0, 600px);
+        @include container(10rem 1rem 0, 600px);
         @include xl {
             @include container(10rem 1rem 0, 960px);
         }
@@ -380,7 +365,7 @@
             grid-template-columns: 1fr 1fr;
             gap: 4rem;
         }
-        @include container(5rem 1rem, 600px);
+        @include container(10rem 1rem, 600px);
         @include xl {
             @include container(10rem 1rem, 960px);
         }
@@ -430,7 +415,7 @@
     background-color: $dark;
     &__container {
         color: $light;
-        @include container(5rem 1rem, 600px);
+        @include container(10rem 1rem, 600px);
         @include xl {
             @include container(10rem 1rem, 960px);
         }
@@ -552,8 +537,7 @@
     &__container {
         @include container(2rem, 960px);
         text-align: center;
-        color: $light;
-        
+        color: $light; 
     }
 }
 
