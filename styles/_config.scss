@@ -1,6 +1,6 @@
 //variables
 $light: #fff;
-$dark: #1d1d1d;
+$dark: #3F3F3F;
 $grey: #919191;
 $accent: #fff;
 $border-radius: 5px;
@@ -11,7 +11,7 @@ $transition: all 0.3s ease;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     letter-spacing: 1px;
 }
 
@@ -24,29 +24,9 @@ html {
   
 }
 
-body {
-    background-color: darken($light,2.5);
-    color: $dark;
-    overflow-x: hidden;
-    line-height: 1.5;
-}
-
-li {
-    list-style-type: none;
-}
-
-a {
-    
-    text-decoration: none;
-    color: $light;
-    transition: 0.3s;
-            &:hover {
-                color: $accent;
-            }
-}
-
 h1,h2,h3, p {
     margin-bottom: 1.5rem;
+
 }
 
 h1 {
@@ -63,96 +43,21 @@ h3 {
     font-size: 1.17rem;
 }
 
-
-
 i {
     font-size: 1.2rem;
 }
 
-
-//utilities
-%btn {
+.above-heading {
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 2rem;
+    border-bottom: 1px solid $dark;
     display: inline-block;
-    padding: 1rem;
-    width: 100%;
-    max-width: 175px;
-    text-align: center;
-    background-color: $light;
-    color: $dark;
-    border: 1px solid $light;
-    transition: $transition;
-    border-radius: $border-radius;
-    cursor: pointer;
-    font-size: 1rem;
-    
-}
-
-.btn {
-    @extend %btn;
-}
-
-.btn-ghost {
-    @extend %btn;
-    background-color: transparent;
-    color: $light;
-    &:hover {
-        background-color: $light;
-        color: $dark;
-    }
+    font-weight: lighter;
 }
 
 .heading {
-    text-transform: capitalize;
+    text-transform: uppercase;
     margin-bottom: 4rem;
-    text-align: center;  
-}
-
-//extends
-%hamburger-bars {
-    width: 25px;
-    height: 2px;
-    background-color: $light;
-    margin: 7px 0;
-    transition: $transition;
-  }
-  
-  .bar1,
-  .bar2,
-  .bar3 {
-    @extend %hamburger-bars;
-  }
-  
-  %nav-link {
-    position: relative;
-    color: $light;
-    text-transform: capitalize;
-    &::after {
-      background: none repeat scroll 0 0 transparent;
-      bottom: -7;
-      content: "";
-      display: block;
-      height: 2px;
-      right: 0;
-      position: absolute;
-      background: $light;
-      transition: $transition;
-      width: 0;
-    }
-    &:hover::after {
-      width: 100%;
-      right: 0;
-    }
-  }
-
-  .nav-link {
-      @extend %nav-link;
-  }
-
-  //mixins
-  @mixin container($padding, $max-width) {
-    padding: $padding;
-    max-width: $max-width;
-    width: 100%;
-    margin: 0 auto;
 }
 
