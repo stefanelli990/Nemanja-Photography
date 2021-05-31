@@ -3,7 +3,6 @@ $light: #fff;
 $dark: #3F3F3F;
 $grey: #919191;
 
-$transition: all 0.3s ease;
 
 //resets
 * {
@@ -16,19 +15,12 @@ $transition: all 0.3s ease;
 }
 
 html {
-    scroll-behavior: smooth;
+ 
     font-size: 0.9rem;
     @include sm {
         font-size: 1rem;
     }
   
-}
-
-body {
-    display: flex;
-    max-width: 1400px;
-    margin: 0 auto;
-    position: relative;
 }
 
 h1,h2,h3, p {
@@ -61,6 +53,25 @@ a {
     color: $dark;
 }
 
+.wrapper {
+    display: flex;
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.sections {
+    
+    margin-left: 0;
+    width: 100%;
+    padding: 0 1rem;
+    @include xl {
+        margin-left: 300px;
+        padding: 0 4rem;
+    }
+   
+}
+
 .container {
     padding: 4rem 0;
 }
@@ -85,7 +96,7 @@ a {
     border: 1px solid $dark;
     padding: 1rem 2rem;
     cursor: pointer; 
-    transition: $transition;
+    transition: all 0.3s ease;
     font-size: 1rem;
     &:hover {
         background-color: transparent;
