@@ -1,7 +1,8 @@
 //variables
 $light: #fff;
 $dark: #3F3F3F;
-$grey: #919191;
+$light-grey: #e4e4e4;
+
 
 
 //resets
@@ -20,7 +21,10 @@ html {
     @include sm {
         font-size: 1rem;
     }
-  
+}
+
+body {
+    color: $dark;
 }
 
 h1,h2,h3, p {
@@ -51,6 +55,7 @@ li {
 a {
     text-decoration: none;
     color: $dark;
+   
 }
 
 .wrapper {
@@ -82,7 +87,7 @@ a {
     padding-left: 2rem;
     border-bottom: 1px solid $dark;
     display: inline-block;
-    font-weight: lighter;
+    font-weight: 500;
 }
 
 .heading {

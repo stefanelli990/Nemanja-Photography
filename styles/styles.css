@@ -18,6 +18,10 @@ html {
   }
 }
 
+body {
+  color: #3F3F3F;
+}
+
 h1, h2, h3, p {
   margin-bottom: 1.5rem;
 }
@@ -79,7 +83,7 @@ a {
   padding-left: 2rem;
   border-bottom: 1px solid #3F3F3F;
   display: inline-block;
-  font-weight: lighter;
+  font-weight: 500;
 }
 
 .heading {
@@ -146,13 +150,13 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-image: -webkit-gradient(linear, left top, right top, from(#fff), to(#F9F9F9));
-  background-image: linear-gradient(to right, #fff, #F9F9F9);
   text-align: center;
   height: 100%;
   width: 300px;
   padding: 4rem 2rem 1.5rem 2rem;
   z-index: 500;
+  border-right: 1px solid #e4e4e4;
+  background-color: #fff;
 }
 
 @media (min-width: 1200px) {
@@ -174,28 +178,34 @@ a {
   height: 200px;
   -o-object-fit: cover;
      object-fit: cover;
-  border: 8px solid #e6e6e6;
+  border: 7px solid transparent;
+  -webkit-box-shadow: 0 0 1px 2px #e4e4e4;
+          box-shadow: 0 0 1px 2px #e4e4e4;
   border-radius: 50%;
   margin-bottom: 2rem;
+}
+
+.sidenav .sidenav-avatar p {
+  font-weight: 500;
 }
 
 .sidenav .sidenav-avatar p::before,
 .sidenav .sidenav-avatar p::after {
   display: inline-block;
   content: "";
-  border-top: 0.1rem solid black;
+  border-top: 1px solid #3F3F3F;
   width: 1rem;
   margin: 0 0.5rem;
-  -webkit-transform: translateY(-0.3rem);
-          transform: translateY(-0.3rem);
+  -webkit-transform: translateY(-6px);
+          transform: translateY(-6px);
 }
 
-.sidenav .nav-links {
-  text-align: left;
-}
-
-.sidenav .nav-links ul li {
+.sidenav .nav-links li {
   margin: 2rem 0;
+}
+
+.sidenav .nav-links a {
+  font-weight: 500;
 }
 
 .sidenav .social-links ul {
@@ -353,12 +363,9 @@ a {
   }
 }
 
-@media (min-width: 1200px) {
-  .services .grid {
-    -ms-grid-columns: (1fr)[3];
-        grid-template-columns: repeat(3, 1fr);
-    grid-gap: 2rem;
-  }
+.services .item {
+  padding: 2rem;
+  border: 1px solid #e4e4e4;
 }
 
 .services .item img {
@@ -420,7 +427,7 @@ a {
   outline: 0;
   padding: 1rem;
   width: 100%;
-  border: 1px solid #e7e7e7;
+  border: 1px solid #e4e4e4;
   background-color: transparent;
   -webkit-box-shadow: none;
           box-shadow: none;
@@ -440,7 +447,7 @@ a {
 .contact .contact-form input:focus ~ label,
 .contact .contact-form input:valid ~ label, .contact .contact-form textarea:focus ~ label,
 .contact .contact-form textarea:valid ~ label {
-  top: -10;
+  top: -11;
   color: #3F3F3F;
   font-size: 0.9rem;
   background-color: #fff;
@@ -464,6 +471,6 @@ a {
 .footer {
   padding: 1.5rem;
   text-align: center;
-  border-top: 1px solid #e7e7e7;
+  border-top: 1px solid #e4e4e4;
 }
 /*# sourceMappingURL=styles.css.map */

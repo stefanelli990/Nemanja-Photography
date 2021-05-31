@@ -26,22 +26,22 @@
 //sidenav
 .sidenav {
     left: -100%;
-    @include xl {
-        left: unset;
-    }
     transition: all 0.7s ease;
     position: fixed;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    background-image: linear-gradient(to right, #fff , #F9F9F9);
     text-align: center;
     height: 100%;
     width: 300px;
     padding: 4rem 2rem 1.5rem 2rem;
     z-index: 500;
-   
+    border-right: 1px solid $light-grey;
+    background-color: $light;
+    @include xl {
+        left: unset;
+    }
     .sidenav-avatar {
         text-transform: uppercase;
         h3 {
@@ -51,28 +51,36 @@
             width: 200px;
             height: 200px;
             object-fit: cover;
-            border: 8px solid #e6e6e6;
+            border: 7px solid transparent;
+            box-shadow: 0 0 1px 2px $light-grey;
             border-radius: 50%;
             margin-bottom: 2rem;
         }
+
+        p {
+            font-weight: 500;
+        }
+
         p::before,
         p::after {
             display: inline-block;
             content: "";
-            border-top: 0.1rem solid black;
+            border-top: 1px solid $dark;
             width: 1rem;
             margin: 0 0.5rem;
-            transform: translateY(-0.3rem);
+            transform: translateY(-6px);
         }
     }
 
     .nav-links {
-        text-align: left;
-      ul {
+        
+    
           li {
               margin: 2rem 0;
           }
-      }
+          a {
+            font-weight: 500;
+          }
     }
 
     .social-links {
@@ -186,13 +194,11 @@
         @include lg {
             grid-template-columns: repeat(3, 1fr);
         }
-        @include xl {
-            grid-template-columns: repeat(3, 1fr);
-            grid-gap: 2rem;
-        }
+      
     }
     .item {
-        
+        padding: 2rem;
+        border: 1px solid $light-grey;
         img {
             margin-bottom: 1rem;
             width: 3rem;
@@ -249,7 +255,7 @@
           outline: 0;
           padding: 1rem;
           width: 100%;
-          border: 1px solid #e7e7e7;
+          border: 1px solid $light-grey;
           background-color: transparent;
           box-shadow: none;
           color: $light;
@@ -264,7 +270,7 @@
           }
           &:focus ~ label,
           &:valid ~ label {
-            top: -10;
+            top: -11;
             color: $dark;
             font-size: 0.9rem;
             background-color: $light;
@@ -294,5 +300,5 @@
 .footer {
    padding: 1.5rem;
    text-align: center;
-   border-top: 1px solid #e7e7e7;
+   border-top: 1px solid $light-grey;
 }
