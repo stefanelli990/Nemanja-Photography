@@ -4,7 +4,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nemanja Photography</title>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
     <link rel="stylesheet" href="styles/styles.css">
@@ -14,32 +14,37 @@
     
     
 
-<div class="sidenav">
+    <aside class="sidenav">
         <div class="sidenav__avatar">
             <img src="images/about-img.jpg" alt="">
             <h3>Nemanja Mohenski</h3>
             <p>photographer</p>
         </div>
         <nav class="sidenav__nav-links">
-            <a href="#" class="sidenav__navlinks-navlink">Portfolio</a>
-            <a href="#" class="sidenav__navlinks-navlink">Services</a>
-            <a href="#" class="sidenav__navlinks-navlink">About</a>
-            <a href="#" class="sidenav__navlinks-navlink">Contact</a>
+            <ul>
+                <li><a href="#portfolio" class="sidenav__navlinks-navlink">Portfolio</a></li>
+                <li><a href="#services" class="sidenav__navlinks-navlink">Services</a></li>
+                <li><a href="#about" class="sidenav__navlinks-navlink">About</a></li>
+                <li><a href="#contact" class="sidenav__navlinks-navlink">Contact</a></li>
+            </ul>
         </nav>
         <div class="sidenav__social-links">
-            <a href="#" class="sidenav__social-link"><i class="fab fa-instagram"></i></a>
-            <a href="#" class="sidenav__social-link"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" class="sidenav__social-link"><i class="fab fa-linkedin-in"></i></a>
+            <ul>
+                <li><a href="#" class="sidenav__social-link"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#" class="sidenav__social-link"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#" class="sidenav__social-link"><i class="fab fa-linkedin-in"></i></a></li>
+            </ul>
         </div>
-</div>
+    </aside>
 
 
 <div class="sections">
  
-    <section class="gallery" id="gallery">
-        <div class="gallery__container">
+    <section class="portfolio" id="portfolio">
+        <div class="portfolio__container container">
+            <h3 class="above-heading">Portfolio</h3>
             <h1 class="heading">my latest works</h1>
-            <div class="gallery__grid">
+            <div class="portfolio__grid">
             <a href="images/gallery1.jpg" id="img1" class="glightbox">
                 <img src="images/gallery1.jpg" alt="image" />
               </a>
@@ -62,74 +67,82 @@
         </div>
     </section>
 
-        <section class="services">
-            <div class="services__container">
+        <section class="services" id="services">
+            <div class="services__container container">
                 <h3 class="above-heading">Services</h3>
                     <h1 class="heading">what can do for you</h1>
                     <div class="services__grid">
                         <div class="services__item">
                             <img src="images/camera.svg" class="services__item--img" alt="">
-                            <h3>Photo shooting</h3>
+                            <h2>Photo shooting</h2>
                             <p>Photography in the studio, outdoors, staged photo session, shooting.</p>
                         </div>
                         <div class="services__item">
                             <img src="images/video.svg" class="services__item--img" alt="">
-                            <h3>Video shooting</h3>
+                            <h2>Video shooting</h2>
                             <p>In addition to excellent photographs, professional video filming is carried out.</p>
                         </div>
                         <div class="services__item">
                             <img src="images/image.svg" class="services__item--img" alt="">
-                            <h3>Retouch</h3>
+                            <h2>Retouch</h2>
                             <p>All photos are processed and the customer receives the finished result.</p>
                         </div>
                     </div>
             </div>
         </section>
+
+        <section class="about" id="about">
+            <div class="about__container container">
+                <h3 class="above-heading">About</h3>
+                    <h1 class="heading">let's introduce myself</h1>
+                        <p>Hey, my name is Nemanja Mohenski. I am a professional photographer with five years of experience.</p> 
+                        <p>Being passionate about my work very much, i like to give people memories captured in their photos. You will have photos of important moments of life among important people, or ordinary portraits in the office style, thematic portraits, and many others.</p>
+                        <p>The photo session can take place both indoors and outdoors. I will be happy to work with you!</p>
+            </div>
+        </section>
+
+        <section class="contact" id="contact">
+            <div class="contact__container container">
+                <h3 class="above-heading">Contact</h3>
+                <h1 class="heading">get in touch</h1>
+                <div class="contact__grid-container">
+                    <form class="contact-form" name="contact-form" method="POST" data-netlify="true">
+                        <div class="input-field">
+                          <input name="name" type="text" id="name" required autocomplete="off"/>
+                          <label for="name">Your Name</label>
+                        </div>
+                        <div class="input-field">
+                          <input name="email" type="text" id="email" required autocomplete="off"/>
+                          <label for="email">Your Email</label>
+                        </div>
+                        <div class="input-field">
+                          <textarea name="textarea" id="textarea" required autocomplete="off"></textarea>
+                          <label for="textarea">Write Message</label>
+                        </div>
+                        <button class="btn" type="submit">Send Message</button>
+                      </form>
+                      <div class="contact__info">
+                        <ul>
+                            <li><i class="fas fa-envelope"></i><a href="mailto:nemanja.mohenski@gmail.com" target="_blank">nemanja.mohenski@gmail.com</a></li>
+                            <li><i class="fas fa-mobile-alt"></i><a href="tel:+381691019376" target="_blank">+381 (0)69 101 93 76</a></li>
+                            <li><i class="fas fa-map-marker-alt"></i>Niš, Serbia</li>
+                       </ul>
+                   </div>
+                </div>
+            </div>    
+        </section>
+        
+        <footer class="footer">
+            <div class="footer__container">
+                © 2021 Nemanja Photography. All rights reserved.
+            </div>
+        </footer> 
     
 </div>
 
 
 
 
-<!-- <section id="home" class="showcase">
-    <div class="showcase__container">
-        <div class="showcase__text">
-        <h1>Let's capture your beautiful moments</h1>
-        <p>I am Nemanja Mohenski, a photographer based in Nis.</p>
-        <a href="#gallery" class="btn-ghost">View Gallery</a>
-        </div>
-        <div class="showcase__image">
-            <img src="images/landing-image.png" alt="">
-        </div>
-    </div>
-</section>
-
-
-
-
-
-<section class="services" id="services">
-    <div class="services__container">
-        <h1 class="heading">what can do for you</h1>
-        <div class="services__grid">
-            <div class="services__item">
-                <i class="fas fa-camera"></i>
-                <h3>Photo shooting</h3>
-                <p>Photography in the studio, outdoors, staged photo session, shooting.</p>
-            </div>
-            <div class="services__item">
-                <i class="fas fa-video"></i>
-                <h3>Video shooting</h3>
-                <p>In addition to excellent photographs, professional video filming is carried out.</p>
-            </div>
-            <div class="services__item">
-                <i class="far fa-image"></i>
-                <h3>Retouch</h3>
-                <p>All photos are processed and the customer receives the finished result.</p>
-            </div>
-        </div>
-    </div>
-</section>
 
 
 
@@ -137,69 +150,19 @@
 
 
 
-<section class="about" id="about">
-    <div class="about__container">
-        <div class="about__image">
-            <img src="images/about-img.jpg" alt="">
-        </div>
-        <div class="about__text">
-            <h1 class="heading">let's introduce myself</h1>
-                <p>Hey, my name is Nemanja Mohenski. I am a professional photographer with five years of experience.</p> 
-                <p>Being passionate about my work very much, i like to give people memories captured in their photos. You will have photos of important moments of life among important people, or ordinary portraits in the office style, thematic portraits, and many others.</p>
-                <p>The photo session can take place both indoors and outdoors. I will be happy to work with you!</p>
-        </div>
-    </div>
-</section>
 
 
 
 
-<section class="contact" id="contact">
-    <div class="contact__container">
-        <h1 class="heading">get in touch</h1>
-        <div class="contact__flex-container">
-            <form class="contact-form" name="contact-form" method="POST" data-netlify="true">
-                <div class="input-field">
-                  <input name="name" type="text" id="name" required autocomplete="off"/>
-                  <label for="name">Your Name</label>
-                </div>
-                <div class="input-field">
-                  <input name="email" type="text" id="email" required autocomplete="off"/>
-                  <label for="email">Your Email</label>
-                </div>
-                <div class="input-field">
-                  <textarea name="textarea" id="textarea" required autocomplete="off"></textarea>
-                  <label for="textarea">Write Message</label>
-                </div>
-                <button class="btn" type="submit">Send Message</button>
-              </form>
-              <div class="contact__info">
-                <ul>
-                   <li><h3>Email</h3></li>
-                   <li><a href="mailto:nemanja.mohenski@gmail.com" target="_blank">nemanja.mohenski@gmail.com</a></li>
-               </ul>
-               <ul>
-                   <li><h3>Phone</h3></li>
-                   <li><a href="tel:+381691019376" target="_blank">+381 (0)69 101 93 76</a></li>
-               </ul>
-               <ul>
-                   <li><h3>Social Networks</h3></li>
-                   <ul class="social">
-                       <li><a href="https://www.instagram.com/nemanjaphotography_/" class="social-link" target="_blank"><i class="fab fa-instagram"></i></a></li>
-                       <li><a href="https://www.facebook.com/NM-Photography-102095008194968" class="social-link" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-                       <li><a href="https://www.linkedin.com/in/nemanja-mohenski-0944bb1b5/" class="social-link" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
-                   </ul>
-               </ul>
-           </div>
-        </div>
-    </div>    
-</section>
 
-<footer class="footer">
-    <div class="footer__container">
-        © 2021 Nemanja Photography. All rights reserved.
-    </div>
-</footer> -->
+
+
+
+
+
+
+
+
 
 
 
