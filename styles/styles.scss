@@ -34,13 +34,13 @@
     align-items: center;
     text-align: center;
     height: 100%;
-    width: 300px;
+    width: 350px;
     padding: 4rem 2rem 1.5rem 2rem;
     z-index: 500;
-    border-right: 1px solid $light-grey;
     background-color: $light;
     @include xl {
         left: unset;
+        box-shadow: 3px 0px 5px -1px #d8d8d8;
     }
     .sidenav-avatar {
         text-transform: uppercase;
@@ -55,6 +55,7 @@
             box-shadow: 0 0 1px 2px $light-grey;
             border-radius: 50%;
             margin-bottom: 2rem;
+            object-position: 0 0;
         }
 
         p {

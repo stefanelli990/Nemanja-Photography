@@ -68,7 +68,7 @@ a {
 
 @media (min-width: 1200px) {
   .sections {
-    margin-left: 300px;
+    margin-left: 350px;
     padding: 0 4rem;
   }
 }
@@ -152,16 +152,17 @@ a {
           align-items: center;
   text-align: center;
   height: 100%;
-  width: 300px;
+  width: 350px;
   padding: 4rem 2rem 1.5rem 2rem;
   z-index: 500;
-  border-right: 1px solid #e4e4e4;
   background-color: #fff;
 }
 
 @media (min-width: 1200px) {
   .sidenav {
     left: unset;
+    -webkit-box-shadow: 3px 0px 5px -1px #d8d8d8;
+            box-shadow: 3px 0px 5px -1px #d8d8d8;
   }
 }
 
@@ -183,6 +184,8 @@ a {
           box-shadow: 0 0 1px 2px #e4e4e4;
   border-radius: 50%;
   margin-bottom: 2rem;
+  -o-object-position: 0 0;
+     object-position: 0 0;
 }
 
 .sidenav .sidenav-avatar p {
