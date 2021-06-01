@@ -10,6 +10,7 @@
     top: 0;
     right: 0;
     cursor: pointer;
+    
     @include xl {
         display: none;
     }
@@ -20,26 +21,47 @@
         height: 2px;
         background-color: $light;
         margin: 6px 0;
+        transition: .3s;
+    }
+    
+      &.change {
+      .bar1 {
+        transform: rotate(-45deg) translate(-6px, 6px);
+      }
+      
+      .bar2 {
+        opacity: 0;
+      }
+      
+      .bar3 {
+        
+        transform: rotate(45deg) translate(-6px, -5px);
+      }
     }
 }
 
 //sidenav
 .sidenav {
-    left: -100%;
-    transition: all 0.7s ease;
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s;
     position: fixed;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     text-align: center;
-    height: 100%;
-    width: 350px;
+    height: 100vh;
+    width: 100%;
     padding: 4rem 2rem 1.5rem 2rem;
     z-index: 500;
     background-color: $light;
+    
     @include xl {
-        left: unset;
+        
+        visibility: visible;
+        opacity: 1;
+        width: 350px;
         box-shadow: 3px 0px 5px -1px #d8d8d8;
     }
     .sidenav-avatar {
@@ -93,16 +115,8 @@
         }
     }
     &.active {
-        left: 0;
-        width: 100%;
-
-        @include md {
-            width: 50%;
-        }
-        @include xl {
-            left: 0;
-            width: 300px;
-        }
+        visibility: visible;
+        opacity: 1;
     }
 }
 
@@ -192,7 +206,7 @@
         @include md {
             grid-template-columns: repeat(2, 1fr);
         }
-        @include lg {
+        @include mediaQuery(1400px) {
             grid-template-columns: repeat(3, 1fr);
         }
       
@@ -203,6 +217,9 @@
         img {
             margin-bottom: 1rem;
             width: 3rem;
+        }
+        p {
+            margin-bottom: 0;
         }
     }
 }

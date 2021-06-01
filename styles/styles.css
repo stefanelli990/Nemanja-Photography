@@ -130,12 +130,29 @@ a {
   height: 2px;
   background-color: #fff;
   margin: 6px 0;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.toggle.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+          transform: rotate(-45deg) translate(-6px, 6px);
+}
+
+.toggle.change .bar2 {
+  opacity: 0;
+}
+
+.toggle.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-6px, -5px);
+          transform: rotate(45deg) translate(-6px, -5px);
 }
 
 .sidenav {
-  left: -100%;
-  -webkit-transition: all 0.7s ease;
-  transition: all 0.7s ease;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: .3s;
+  transition: .3s;
   position: fixed;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -151,8 +168,8 @@ a {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  height: 100%;
-  width: 350px;
+  height: 100vh;
+  width: 100%;
   padding: 4rem 2rem 1.5rem 2rem;
   z-index: 500;
   background-color: #fff;
@@ -160,7 +177,9 @@ a {
 
 @media (min-width: 1200px) {
   .sidenav {
-    left: unset;
+    visibility: visible;
+    opacity: 1;
+    width: 350px;
     -webkit-box-shadow: 3px 0px 5px -1px #d8d8d8;
             box-shadow: 3px 0px 5px -1px #d8d8d8;
   }
@@ -222,21 +241,8 @@ a {
 }
 
 .sidenav.active {
-  left: 0;
-  width: 100%;
-}
-
-@media (min-width: 768px) {
-  .sidenav.active {
-    width: 50%;
-  }
-}
-
-@media (min-width: 1200px) {
-  .sidenav.active {
-    left: 0;
-    width: 300px;
-  }
+  visibility: visible;
+  opacity: 1;
 }
 
 .portfolio .grid {
@@ -359,7 +365,7 @@ a {
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1400px) {
   .services .grid {
     -ms-grid-columns: (1fr)[3];
         grid-template-columns: repeat(3, 1fr);
@@ -374,6 +380,10 @@ a {
 .services .item img {
   margin-bottom: 1rem;
   width: 3rem;
+}
+
+.services .item p {
+  margin-bottom: 0;
 }
 
 .contact .container {
