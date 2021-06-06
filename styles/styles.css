@@ -80,7 +80,7 @@ a {
 .above-heading {
   margin-bottom: 0.5rem;
   padding-bottom: 0.5rem;
-  padding-left: 2rem;
+  padding-left: 1rem;
   border-bottom: 1px solid #3F3F3F;
   display: inline-block;
   font-weight: 500;
@@ -373,17 +373,13 @@ a {
 }
 
 .services .item {
-  padding: 2rem;
+  padding: 1rem;
   border: 1px solid #e4e4e4;
 }
 
 .services .item img {
   margin-bottom: 1rem;
   width: 3rem;
-}
-
-.services .item p {
-  margin-bottom: 0;
 }
 
 .contact .container {

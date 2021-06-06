@@ -208,18 +208,16 @@
         }
         @include mediaQuery(1400px) {
             grid-template-columns: repeat(3, 1fr);
+          
         }
       
     }
     .item {
-        padding: 2rem;
+        padding: 1rem;
         border: 1px solid $light-grey;
         img {
             margin-bottom: 1rem;
             width: 3rem;
-        }
-        p {
-            margin-bottom: 0;
         }
     }
 }
