@@ -23,7 +23,7 @@ body {
 }
 
 h1, h2, h3, p {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 h1 {
@@ -105,6 +105,111 @@ a {
 .btn:hover {
   background-color: transparent;
   color: #3F3F3F;
+}
+
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  color: #3F3F3F;
+  height: 100vh;
+  width: 100%;
+  z-index: 800;
+  opacity: 1;
+  -webkit-transition: .5s;
+  transition: .5s;
+  visibility: visible;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.loader.active {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loader .square {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  -webkit-perspective: 200px;
+          perspective: 200px;
+}
+
+.loader .square div {
+  position: absolute;
+  top: 0;
+  height: 50px;
+  width: 50px;
+  background: #3F3F3F;
+  -webkit-animation: flip 2s linear infinite;
+          animation: flip 2s linear infinite;
+  -webkit-transform-origin: right bottom;
+          transform-origin: right bottom;
+}
+
+.loader .square div:nth-child(2) {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  opacity: 0.5;
+}
+
+@-webkit-keyframes flip {
+  0% {
+    -webkit-transform: rotateX(0) rotateY(0);
+            transform: rotateX(0) rotateY(0);
+  }
+  25% {
+    -webkit-transform: rotateX(0) rotateY(180deg);
+            transform: rotateX(0) rotateY(180deg);
+  }
+  50% {
+    -webkit-transform: rotateX(180deg) rotateY(180deg);
+            transform: rotateX(180deg) rotateY(180deg);
+  }
+  75% {
+    -webkit-transform: rotateX(180deg) rotateY(0deg);
+            transform: rotateX(180deg) rotateY(0deg);
+  }
+  100% {
+    -webkit-transform: rotateX(0) rotateY(0);
+            transform: rotateX(0) rotateY(0);
+  }
+}
+
+@keyframes flip {
+  0% {
+    -webkit-transform: rotateX(0) rotateY(0);
+            transform: rotateX(0) rotateY(0);
+  }
+  25% {
+    -webkit-transform: rotateX(0) rotateY(180deg);
+            transform: rotateX(0) rotateY(180deg);
+  }
+  50% {
+    -webkit-transform: rotateX(180deg) rotateY(180deg);
+            transform: rotateX(180deg) rotateY(180deg);
+  }
+  75% {
+    -webkit-transform: rotateX(180deg) rotateY(0deg);
+            transform: rotateX(180deg) rotateY(0deg);
+  }
+  100% {
+    -webkit-transform: rotateX(0) rotateY(0);
+            transform: rotateX(0) rotateY(0);
+  }
 }
 
 .toggle {
@@ -373,7 +478,7 @@ a {
 }
 
 .services .item {
-  padding: 1rem;
+  padding: 1.5rem;
   border: 1px solid #e4e4e4;
 }
 
