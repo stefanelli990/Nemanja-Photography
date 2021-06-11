@@ -16,7 +16,7 @@ $light-grey: #e4e4e4;
 }
 
 html {
- 
+    scroll-behavior: smooth;
     font-size: 0.9rem;
     @include sm {
         font-size: 1rem;
