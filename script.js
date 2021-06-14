@@ -20,5 +20,5 @@ const lightbox = GLightbox({
 setTimeout(() => {
     loader.classList.add('active');
     body.style.overflowY = 'visible';
-}, 3000);
+}, 4000);
 
